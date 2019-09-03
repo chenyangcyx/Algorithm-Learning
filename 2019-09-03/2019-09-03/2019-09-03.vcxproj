@@ -126,8 +126,9 @@
     <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CalDays1.cpp" />
-    <ClCompile Include="CalDays2.cpp" />
+    <ClCompile Include="1计算相差天数.cpp" />
+    <ClCompile Include="2计算相差天数_自己写的.cpp" />
+    <ClCompile Include="3计算今年第几天_自己写的.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
