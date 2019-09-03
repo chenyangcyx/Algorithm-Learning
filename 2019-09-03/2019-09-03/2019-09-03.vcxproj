@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{5ED815AE-3FAD-4226-BD05-0C863B44B9AD}</ProjectGuid>
-    <RootNamespace>My20190901</RootNamespace>
+    <ProjectGuid>{5DA2088B-BE0D-4A53-80A9-B5A32C0E4FFF}</ProjectGuid>
+    <RootNamespace>My20190903</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,10 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Readme.md" />
+    <ClCompile Include="CalDays1.cpp" />
+    <ClCompile Include="CalDays2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
