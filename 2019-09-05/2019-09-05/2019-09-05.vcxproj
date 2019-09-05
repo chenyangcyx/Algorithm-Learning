@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="1括号匹配.md" />
+    <None Include="2简单计算器.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

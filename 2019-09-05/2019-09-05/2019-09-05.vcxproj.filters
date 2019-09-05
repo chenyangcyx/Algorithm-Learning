@@ -26,5 +26,8 @@
     <None Include="1括号匹配.md">
       <Filter>源文件</Filter>
     </None>
+    <None Include="2简单计算器.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
