@@ -189,7 +189,7 @@ void AfterOrder_NoRecursion1(TreeNode* T)
 			p = p->rchild;		//此时可以确定，一定有右子树
 			while (p)
 			{
-				//再右子树下再次访问其最下边的左子树
+				//在右子树下再次访问其最下边的左子树
 				st.push(p);
 				p = p->lchild;
 			}
