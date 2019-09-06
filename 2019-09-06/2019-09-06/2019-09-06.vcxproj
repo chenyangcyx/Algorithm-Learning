@@ -131,6 +131,7 @@
     <ClCompile Include="2二叉树遍历_参考代码.cpp" />
     <ClCompile Include="3已知中序后序求前序.cpp" />
     <ClCompile Include="4二叉树的遍历删除.cpp" />
+    <ClCompile Include="5非递归遍历二叉树.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

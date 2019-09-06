@@ -35,5 +35,8 @@
     <ClCompile Include="4二叉树的遍历删除.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="5非递归遍历二叉树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
