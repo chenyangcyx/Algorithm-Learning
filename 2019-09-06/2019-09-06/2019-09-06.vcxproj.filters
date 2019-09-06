@@ -32,5 +32,8 @@
     <ClCompile Include="3已知中序后序求前序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="4二叉树的遍历删除.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
