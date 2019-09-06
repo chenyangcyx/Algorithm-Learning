@@ -127,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1队列的使用.cpp" />
+    <ClCompile Include="2二叉树遍历_动态申请内存.cpp" />
+    <ClCompile Include="2二叉树遍历_参考代码.cpp" />
+    <ClCompile Include="3已知中序后序求前序.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
