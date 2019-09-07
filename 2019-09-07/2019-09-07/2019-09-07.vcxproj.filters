@@ -18,5 +18,8 @@
     <ClCompile Include="1按层创建遍历二叉树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2二叉排序树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
