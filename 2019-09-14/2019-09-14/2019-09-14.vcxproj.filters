@@ -18,5 +18,13 @@
     <ClCompile Include="1素数筛法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2大数的阶乘.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2大数的阶乘.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

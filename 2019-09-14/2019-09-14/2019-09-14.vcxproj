@@ -124,6 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1素数筛法.cpp" />
+    <ClCompile Include="2大数的阶乘.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2大数的阶乘.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
