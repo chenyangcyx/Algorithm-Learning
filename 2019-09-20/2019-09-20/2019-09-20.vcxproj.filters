@@ -27,6 +27,12 @@
     <ClCompile Include="4最小生成树Prime.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="5最短路径Floyd算法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="6CCF考试第5题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="1通畅工程.md">
@@ -39,6 +45,12 @@
       <Filter>源文件</Filter>
     </None>
     <None Include="4最小生成树Prime.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="5最短路径Floyd算法.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="6CCF考试第5题.md">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

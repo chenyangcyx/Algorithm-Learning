@@ -127,12 +127,16 @@
     <ClCompile Include="2求小朋友关系最大人数.cpp" />
     <ClCompile Include="3最小生成树Kruskal.cpp" />
     <ClCompile Include="4最小生成树Prime.cpp" />
+    <ClCompile Include="5最短路径Floyd算法.cpp" />
+    <ClCompile Include="6CCF考试第5题.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="1通畅工程.md" />
     <None Include="2求小朋友关系最大人数.md" />
     <None Include="3最小生成树Kruskal.md" />
     <None Include="4最小生成树Prime.md" />
+    <None Include="5最短路径Floyd算法.md" />
+    <None Include="6CCF考试第5题.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
