@@ -21,12 +21,24 @@
     <ClCompile Include="2求小朋友关系最大人数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="3最小生成树Kruskal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="4最小生成树Prime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="1通畅工程.md">
       <Filter>源文件</Filter>
     </None>
     <None Include="2求小朋友关系最大人数.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="3最小生成树Kruskal.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="4最小生成树Prime.md">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
