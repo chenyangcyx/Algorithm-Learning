@@ -123,6 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1最短路径Dijstra算法.cpp" />
+    <ClCompile Include="2最短路径Dijstra算法2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1最短路径Dijstra算法.md" />
+    <None Include="2最短路径Dijstra算法2.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
