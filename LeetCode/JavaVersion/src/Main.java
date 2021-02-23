@@ -1,7 +1,4 @@
-import CSNotes.TwoPointers.No167TwoSum;
 import CSNotes.TwoPointers.No345ReverseVowelsofaString;
-
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +11,7 @@ public class Main {
         // No633
         // No Test
         // No 345
-        String test_str="leetcode";
+        String test_str = "leetcode";
         System.out.println(new No345ReverseVowelsofaString().reverseVowels(test_str));
     }
 }
