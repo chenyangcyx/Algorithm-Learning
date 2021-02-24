@@ -29,11 +29,11 @@ public class Main {
 //        int []nums2=new int[]{1};
 //        int m=1;
 //        int n=1;
-        int []nums1=new int[]{4,5,6,0,0,0};
-        int []nums2=new int[]{1,2,3};
-        int m=3;
-        int n=3;
-        new No88MergeSortedArray().merge2(nums1,m,nums2,n);
-        System.out.println(Arrays.toString(nums1));
+//        int []nums1=new int[]{4,5,6,0,0,0};
+//        int []nums2=new int[]{1,2,3};
+//        int m=3;
+//        int n=3;
+//        new No88MergeSortedArray().merge2(nums1,m,nums2,n);
+//        System.out.println(Arrays.toString(nums1));
     }
 }
