@@ -1,5 +1,4 @@
-import CSNotes.TwoPointers.No345ReverseVowelsofaString;
-import CSNotes.TwoPointers.No88MergeSortedArray;
+import CSNotes.Sort.QuickSort;
 
 import java.util.Arrays;
 
@@ -35,5 +34,10 @@ public class Main {
 //        int n=3;
 //        new No88MergeSortedArray().merge2(nums1,m,nums2,n);
 //        System.out.println(Arrays.toString(nums1));
+
+        // QuickSorted
+        int []nums=new int[]{100,90,80,70,60,50,40};
+        new QuickSort().quickSort(nums,0, nums.length-1);
+        System.out.println(Arrays.toString(nums));
     }
 }
