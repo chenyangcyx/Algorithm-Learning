@@ -1,4 +1,7 @@
 import CSNotes.TwoPointers.No345ReverseVowelsofaString;
+import CSNotes.TwoPointers.No88MergeSortedArray;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,10 +11,29 @@ public class Main {
 //        int[] numbers=new int[]{2,7,11,15};
 //        int target=9;
 //        System.out.println(Arrays.toString(new No167TwoSum().twoSum(numbers, target)));
+
         // No633
-        // No Test
+
         // No 345
-        String test_str = "leetcode";
-        System.out.println(new No345ReverseVowelsofaString().reverseVowels(test_str));
+//        String test_str = "leetcode";
+//        System.out.println(new No345ReverseVowelsofaString().reverseVowels(test_str));
+
+        // No 680
+
+        // No 88
+//        int []nums1=new int[]{1,2,3,0,0,0};
+//        int []nums2=new int[]{2,5,6};
+//        int m=3;
+//        int n=3;
+//        int []nums1=new int[]{2,0};
+//        int []nums2=new int[]{1};
+//        int m=1;
+//        int n=1;
+        int []nums1=new int[]{4,5,6,0,0,0};
+        int []nums2=new int[]{1,2,3};
+        int m=3;
+        int n=3;
+        new No88MergeSortedArray().merge2(nums1,m,nums2,n);
+        System.out.println(Arrays.toString(nums1));
     }
 }
