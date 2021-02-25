@@ -10,7 +10,7 @@ public class QuickSort {
     private int Partition(int[] nums, int left, int right) {
 //        int temp = nums[left];
         // 为了使得不会出现最坏的时间情况，将left的元素与[left, right]内的一个元素进行调换
-        int random_pos=new Random().nextInt(right);
+        int random_pos=new Random().nextInt(right-left)+left;
         int t=nums[left];
         nums[left]=nums[random_pos];
         nums[random_pos]=t;
