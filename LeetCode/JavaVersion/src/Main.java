@@ -1,4 +1,8 @@
+import CSNotes.Sort.HeapSort;
+import CSNotes.Sort.No215KthLargestElementinanArray;
 import CSNotes.Sort.QuickSort;
+import CSNotes.TwoPointers.No345ReverseVowelsofaString;
+import CSNotes.TwoPointers.No88MergeSortedArray;
 
 import java.util.Arrays;
 
@@ -36,8 +40,17 @@ public class Main {
 //        System.out.println(Arrays.toString(nums1));
 
         // QuickSorted
-        int []nums=new int[]{100,90,80,70,60,50,40};
-        new QuickSort().quickSort(nums,0, nums.length-1);
-        System.out.println(Arrays.toString(nums));
+//        int []nums=new int[]{100,90,80,70,60,50,40};
+//        new QuickSort().quickSort(nums,0, nums.length-1);
+//        System.out.println(Arrays.toString(nums));
+
+//        // 堆排序
+//        int []nums=new int[]{10,60,22,85,50,20,40,58};
+//        new HeapSort().heapSort(nums);
+//        System.out.println(Arrays.toString(nums));
+
+        // No 215
+        int []nums=new int[]{10,60,22,85,50,20,40,58};
+        System.out.println(new No215KthLargestElementinanArray().findKthLargest3(nums,2));
     }
 }
