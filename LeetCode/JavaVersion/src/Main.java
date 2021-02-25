@@ -1,11 +1,4 @@
-import CSNotes.Sort.BucketSort;
-import CSNotes.Sort.HeapSort;
-import CSNotes.Sort.No215KthLargestElementinanArray;
-import CSNotes.Sort.QuickSort;
-import CSNotes.TwoPointers.No345ReverseVowelsofaString;
-import CSNotes.TwoPointers.No88MergeSortedArray;
-
-import java.util.Arrays;
+import CSNotes.Sort.No451SortCharactersByFrequency;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,12 +44,16 @@ public class Main {
 //        System.out.println(Arrays.toString(nums));
 
         // 桶排序
-        int []nums=new int[]{10,60,22,85,50,20,40,58};
-        new BucketSort().bucketSort(nums);
-        System.out.println(Arrays.toString(nums));
+//        int []nums=new int[]{10,60,22,85,50,20,40,58};
+//        new BucketSort().bucketSort(nums);
+//        System.out.println(Arrays.toString(nums));
 
         // No 215
 //        int []nums=new int[]{10,60,22,85,50,20,40,58};
 //        System.out.println(new No215KthLargestElementinanArray().findKthLargest3(nums,2));
+
+        // No 451
+        String str = "cccaaa";
+        System.out.println(new No451SortCharactersByFrequency().frequencySort1(str));
     }
 }
