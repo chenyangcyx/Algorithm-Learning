@@ -1,3 +1,4 @@
+import CSNotes.Sort.BucketSort;
 import CSNotes.Sort.HeapSort;
 import CSNotes.Sort.No215KthLargestElementinanArray;
 import CSNotes.Sort.QuickSort;
@@ -39,7 +40,7 @@ public class Main {
 //        new No88MergeSortedArray().merge2(nums1,m,nums2,n);
 //        System.out.println(Arrays.toString(nums1));
 
-        // QuickSorted
+        // 快速排序
 //        int []nums=new int[]{100,90,80,70,60,50,40};
 //        new QuickSort().quickSort(nums,0, nums.length-1);
 //        System.out.println(Arrays.toString(nums));
@@ -49,8 +50,13 @@ public class Main {
 //        new HeapSort().heapSort(nums);
 //        System.out.println(Arrays.toString(nums));
 
-        // No 215
+        // 桶排序
         int []nums=new int[]{10,60,22,85,50,20,40,58};
-        System.out.println(new No215KthLargestElementinanArray().findKthLargest3(nums,2));
+        new BucketSort().bucketSort(nums);
+        System.out.println(Arrays.toString(nums));
+
+        // No 215
+//        int []nums=new int[]{10,60,22,85,50,20,40,58};
+//        System.out.println(new No215KthLargestElementinanArray().findKthLargest3(nums,2));
     }
 }
