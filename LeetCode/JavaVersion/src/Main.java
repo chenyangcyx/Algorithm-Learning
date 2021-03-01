@@ -1,4 +1,5 @@
 import CSNotes.Greedy.No605CanPlaceFlowers;
+import CSNotes.Greedy.No665NondecreasingArray;
 import CSNotes.Sort.No451SortCharactersByFrequency;
 
 public class Main {
@@ -57,8 +58,12 @@ public class Main {
 //        String str = "cccaaa";
 //        System.out.println(new No451SortCharactersByFrequency().frequencySort1(str));
 
-        // No605
-        int[] flowers=new int[]{0,0,1,0,0};
-        System.out.println(new No605CanPlaceFlowers().canPlaceFlowers1(flowers,3));
+//        // No605
+//        int[] flowers=new int[]{0,0,1,0,0};
+//        System.out.println(new No605CanPlaceFlowers().canPlaceFlowers1(flowers,3));
+
+        // No 665
+        int []nums=new int[]{4,2,3,4};
+        System.out.println(new No665NondecreasingArray().checkPossibility(nums));
     }
 }
