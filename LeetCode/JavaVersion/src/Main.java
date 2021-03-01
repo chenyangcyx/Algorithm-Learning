@@ -1,3 +1,4 @@
+import CSNotes.BinarySearch.BinarySearch;
 import CSNotes.Greedy.No53MaximumSubarray;
 import CSNotes.Greedy.No605CanPlaceFlowers;
 import CSNotes.Greedy.No665NondecreasingArray;
@@ -67,8 +68,12 @@ public class Main {
 //        int []nums=new int[]{4,2,3,4};
 //        System.out.println(new No665NondecreasingArray().checkPossibility(nums));
 
-        // No 53
-        int []nums=new int[]{-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println(new No53MaximumSubarray().maxSubArray(nums));
+//        // No 53
+//        int []nums=new int[]{-2,1,-3,4,-1,2,1,-5,4};
+//        System.out.println(new No53MaximumSubarray().maxSubArray(nums));
+
+        // 二分查找
+        int []nums=new int[]{1,2,3,4,5,6,7,8,9,10};
+        System.out.println(new BinarySearch().binarySearch(nums,7));
     }
 }
