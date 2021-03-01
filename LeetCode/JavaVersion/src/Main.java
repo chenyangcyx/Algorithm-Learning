@@ -1,3 +1,4 @@
+import CSNotes.Greedy.No605CanPlaceFlowers;
 import CSNotes.Sort.No451SortCharactersByFrequency;
 
 public class Main {
@@ -53,7 +54,11 @@ public class Main {
 //        System.out.println(new No215KthLargestElementinanArray().findKthLargest3(nums,2));
 
         // No 451
-        String str = "cccaaa";
-        System.out.println(new No451SortCharactersByFrequency().frequencySort1(str));
+//        String str = "cccaaa";
+//        System.out.println(new No451SortCharactersByFrequency().frequencySort1(str));
+
+        // No605
+        int[] flowers=new int[]{0,0,1,0,0};
+        System.out.println(new No605CanPlaceFlowers().canPlaceFlowers1(flowers,3));
     }
 }
