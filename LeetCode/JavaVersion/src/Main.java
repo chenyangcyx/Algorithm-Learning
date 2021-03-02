@@ -1,4 +1,5 @@
 import CSNotes.BinarySearch.BinarySearch;
+import CSNotes.BinarySearch.No153FindMinimuminRotatedSortedArray;
 import CSNotes.BinarySearch.No744FindSmallestLetterGreaterThanTarget;
 import CSNotes.Greedy.No53MaximumSubarray;
 import CSNotes.Greedy.No605CanPlaceFlowers;
@@ -77,8 +78,13 @@ public class Main {
 //        int []nums=new int[]{1,2,3,4,5,6,7,8,9,10};
 //        System.out.println(new BinarySearch().binarySearch(nums,7));
 
-        // No 744
-        char []chars=new char[]{'c', 'f', 'j'};
-        System.out.println(new No744FindSmallestLetterGreaterThanTarget().nextGreatestLetter1(chars,'j'));
+//        // No 744
+//        char []chars=new char[]{'c', 'f', 'j'};
+//        System.out.println(new No744FindSmallestLetterGreaterThanTarget().nextGreatestLetter1(chars,'j'));
+
+        // No 153
+        int []nums1=new int[]{4,5,6,7,0,1,2};
+        int []nums2=new int[]{3,1,2};
+        System.out.println(new No153FindMinimuminRotatedSortedArray().findMin1(nums2));
     }
 }
