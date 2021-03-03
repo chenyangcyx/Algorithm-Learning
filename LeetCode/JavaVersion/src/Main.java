@@ -88,8 +88,10 @@ public class Main {
 //        int []nums2=new int[]{3,1,2};
 //        System.out.println(new No153FindMinimuminRotatedSortedArray().findMin1(nums2));
 
-        // No 241
-        String str="2*3-4*5";
-        System.out.println(new No241DifferentWaystoAddParentheses().diffWaysToCompute1(str));
+//        // No 241
+//        String str="2*3-4*5";
+//        System.out.println(new No241DifferentWaystoAddParentheses().diffWaysToCompute1(str));
+
+
     }
 }
