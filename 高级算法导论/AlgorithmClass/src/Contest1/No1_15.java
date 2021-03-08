@@ -1,10 +1,12 @@
+package Contest1;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class No1_15 {
+    public void No1_15() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
