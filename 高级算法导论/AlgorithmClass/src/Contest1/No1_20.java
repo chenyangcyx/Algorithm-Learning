@@ -1,7 +1,9 @@
+package Contest1;
+
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class No1_20 {
+    public void No1_20() {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int[] nums = new int[N];
@@ -14,7 +16,7 @@ public class Main {
         System.out.println();
     }
 
-    private static void mergeSort1(int[] nums, int left, int right) {
+    private void mergeSort1(int[] nums, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
             mergeSort1(nums, left, mid);
@@ -23,7 +25,7 @@ public class Main {
         }
     }
 
-    public static void mergeSort2(int[] nums, int left, int right) {
+    public void mergeSort2(int[] nums, int left, int right) {
         for (int step = 2; step / 2 <= nums.length; step *= 2) {
             for (int i = 0; i <= nums.length; i += step) {
                 int mid = i + step / 2 -1;
@@ -32,7 +34,7 @@ public class Main {
         }
     }
 
-    private static void merge(int[] nums, int L1, int R1, int L2, int R2) {
+    private void merge(int[] nums, int L1, int R1, int L2, int R2) {
         int i = L1, j = L2;
         int[] temp = new int[nums.length];
         int index = 0;
