@@ -1,37 +1,47 @@
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        while (T-- > 0) {
-            int N = sc.nextInt();
-            int[] nums = new int[N];
-            int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
-            for (int i = 0; i < N; i++) {
-                nums[i] = sc.nextInt();
-                max = Integer.max(max, nums[i]);
-                min = Integer.min(min, nums[i]);
-            }
-            // 初始化计数数组count
-            int[] count = new int[max - min + 1];
-            // 对计数数组的各元素赋值
-            for (int num : nums) count[num - min]++;
-            // 计数数组变形
-            for (int i = 1; i < count.length; i++) count[i] += count[i - 1];
-            // 创建结果数组
-            int[] result = new int[N];
-            // 遍历A中的元素，并找到对应的位置填充
-            for (int i = 0; i < N; i++) {
-                result[count[nums[i] - min] - 1] = nums[i];
-                count[nums[i] - min]--;
-            }
-            // 输出结果
-            for (int i = 0; i < N; i++) {
-                if (i == 0) System.out.print(result[i]);
-                else System.out.print(" " + result[i]);
-            }
-            System.out.println();
+        int N = sc.nextInt();
+        int[] nums = new int[N];
+        for (int i = 0; i < N; i++) nums[i] = sc.nextInt();
+        Arrays.sort(nums);
+//        LinkedList<Integer> stack = new LinkedList<>();
+//        int left = 0, right = N-1;
+//        stack.addLast(left);
+//        stack.addLast(right);
+//        while (!stack.isEmpty()) {
+//            int _right = stack.pollLast();
+//            int _left = stack.pollLast();
+//            int index = Partition(nums, _left, _right);
+//            if (_left < index-1) {
+//                stack.addLast(_left);
+//                stack.addLast(index - 1);
+//            }
+//            if (_right > index+1) {
+//                stack.addLast(index + 1);
+//                stack.addLast(_right);
+//            }
+//        }
+        for (int i = 0; i < N; i++) {
+            if (i == 0) System.out.print(nums[i]);
+            else System.out.print(" " + nums[i]);
         }
+        System.out.println();
+    }
+
+    private static int Partition(int[] nums, int left, int right) {
+        int temp = nums[left];
+        while (left < right) {
+            while (left < right && nums[right] > temp) right--;
+            nums[left] = nums[right];
+            while (left < right && nums[left] < temp) left++;
+            nums[right] = nums[left];
+        }
+        nums[left] = temp;
+        return left;
     }
 }
