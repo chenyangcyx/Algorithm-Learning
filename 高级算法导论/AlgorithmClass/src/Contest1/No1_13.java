@@ -1,10 +1,12 @@
+package Contest1;
+
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Main {
-    public static void main(String[] args) {
+public class No1_13 {
+    public void No1_13() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
