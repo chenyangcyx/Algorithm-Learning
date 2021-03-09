@@ -1,9 +1,11 @@
-import java.util.HashMap;
-import java.util.PriorityQueue;
-import java.util.Scanner;
+package Contest1;
 
-public class Main {
-    public static class NumCount {
+import javafx.util.Pair;
+
+import java.util.*;
+
+public class No1_25 {
+    public class NumCount {
         int num;
         int count = 0;
 
@@ -21,7 +23,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public void No1_25() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
