@@ -1,7 +1,9 @@
+package Contest1;
+
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class No1_8 {
+    public void No1_8() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
