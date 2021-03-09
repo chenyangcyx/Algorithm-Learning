@@ -1,7 +1,9 @@
+package Contest1;
+
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class No1_5 {
+    public void No1_5() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
@@ -24,7 +26,7 @@ public class Main {
         }
     }
 
-    private static int getBucketCount(int[] nums, int size) {
+    private int getBucketCount(int[] nums, int size) {
         int count = 1;
         int sum = 0;
         for (int num : nums) {
