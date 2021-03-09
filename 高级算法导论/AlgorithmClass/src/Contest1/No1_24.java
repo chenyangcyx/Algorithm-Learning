@@ -1,7 +1,9 @@
+package Contest1;
+
 import java.util.*;
 
-public class Main {
-    static class Point {
+public class No1_24 {
+    class Point {
         double x, y;
 
         public Point() {
@@ -31,7 +33,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public void No1_24() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         sc.nextLine();
@@ -74,7 +76,7 @@ public class Main {
         }
     }
 
-    private static String formatPoint(Point p) {
+    private String formatPoint(Point p) {
         StringBuilder sb = new StringBuilder();
         double x = p.getX();
         double y = p.getY();
@@ -86,11 +88,11 @@ public class Main {
         return sb.toString();
     }
 
-    private static double calDis(Point a, Point b) {
+    private double calDis(Point a, Point b) {
         return Math.sqrt((a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY() - b.getY()) * (a.getY() - b.getY()));
     }
 
-    public static List<Point[]> getNearest(Point[] points, int left, int right) {
+    public List<Point[]> getNearest(Point[] points, int left, int right) {
         //若只有一个点，则不存在最近点对的情况
         if (left == right) return new ArrayList<>();
         //若只有两个点，则它们就是最近点
