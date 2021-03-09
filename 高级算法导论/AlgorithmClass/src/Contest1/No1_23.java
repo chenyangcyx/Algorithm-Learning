@@ -1,13 +1,15 @@
+package Contest1;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    static int L_chess_num;
-    static ArrayList<Integer> result_x = new ArrayList<>(), result_y = new ArrayList<>();
-    static int[] dire_x = new int[]{0, -1, 1, 0}, dire_y = new int[]{-1, 0, 0, 1};
-    static boolean[][] vis;
+public class No1_23 {
+    int L_chess_num;
+    ArrayList<Integer> result_x = new ArrayList<>(), result_y = new ArrayList<>();
+    int[] dire_x = new int[]{0, -1, 1, 0}, dire_y = new int[]{-1, 0, 0, 1};
+    boolean[][] vis;
 
-    public static void main(String[] args) {
+    public void No1_23() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
@@ -41,7 +43,7 @@ public class Main {
         }
     }
 
-    private static void fillChessBoard(int[][] chess, int row, int column, int x, int y, int size) {
+    private void fillChessBoard(int[][] chess, int row, int column, int x, int y, int size) {
         if (size == 1) return;
         int subsize = size / 2;
         int t = ++L_chess_num;
@@ -77,7 +79,7 @@ public class Main {
         }
     }
 
-    private static void findResult(int[][] chess, int check_x, int check_y, int checknum) {
+    private void findResult(int[][] chess, int check_x, int check_y, int checknum) {
         if (result_x.size() == 2 && result_y.size() == 2) return;
         for (int i = 0; i < 4; i++) {
             int res_x = check_x + dire_x[i];
