@@ -1,9 +1,8 @@
-import QuestionBank.No224BasicCalculator;
+import QuestionBank.No46Permutations;
 
 public class Main {
     public static void main(String[] args) {
-        String str="( 1+ ( 4+ 5 +2 )- 3) + (6 +8)";
-        String str2="-2 + 1";
-        System.out.println(new No224BasicCalculator().calculate(str));
+        int []nums=new int[]{1,2,3,4};
+        new No46Permutations().permute(nums);
     }
 }
