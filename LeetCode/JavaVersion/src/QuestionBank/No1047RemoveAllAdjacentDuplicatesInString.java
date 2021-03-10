@@ -1,7 +1,7 @@
 package QuestionBank;
 import java.util.LinkedList;
 
-public class No1047removeDuplicates {
+public class No1047RemoveAllAdjacentDuplicatesInString {
     public String removeDuplicates(String S) {
         char[] array = S.toCharArray();
         LinkedList<Character> stack = new LinkedList<>();
