@@ -1,17 +1,9 @@
-import CSNotes.BinarySearch.BinarySearch;
-import CSNotes.BinarySearch.No153FindMinimuminRotatedSortedArray;
-import CSNotes.BinarySearch.No744FindSmallestLetterGreaterThanTarget;
-import CSNotes.DivideAndConquer.No241DifferentWaystoAddParentheses;
-import CSNotes.Greedy.No53MaximumSubarray;
-import CSNotes.Greedy.No605CanPlaceFlowers;
-import CSNotes.Greedy.No665NondecreasingArray;
-import CSNotes.LinkedList.No19RemoveNthNodeFromEndofList;
-import CSNotes.Sort.No451SortCharactersByFrequency;
-import QuestionBank.No1047removeDuplicates;
+import QuestionBank.No224BasicCalculator;
 
 public class Main {
     public static void main(String[] args) {
-        String str="abbaca";
-        System.out.println(new No1047removeDuplicates().removeDuplicates(str));
+        String str="( 1+ ( 4+ 5 +2 )- 3) + (6 +8)";
+        String str2="-2 + 1";
+        System.out.println(new No224BasicCalculator().calculate(str));
     }
 }
