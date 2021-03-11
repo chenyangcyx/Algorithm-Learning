@@ -3,22 +3,19 @@ package CSNotes.TwoPointers;
 import java.util.HashSet;
 
 public class No345ReverseVowelsofaString {
-    private final HashSet<Character> yuanyin = new HashSet<>() {
-        {
-            add('a');
-            add('e');
-            add('i');
-            add('o');
-            add('u');
-            add('A');
-            add('E');
-            add('I');
-            add('O');
-            add('U');
-        }
-    };
+    private final HashSet<Character> yuanyin = new HashSet<>();
 
     public String reverseVowels(String s) {
+        yuanyin.add('a');
+        yuanyin.add('e');
+        yuanyin.add('i');
+        yuanyin.add('o');
+        yuanyin.add('u');
+        yuanyin.add('A');
+        yuanyin.add('E');
+        yuanyin.add('I');
+        yuanyin.add('O');
+        yuanyin.add('U');
         int i = 0, j = s.length() - 1;
         char[] res = s.toCharArray();
         while (i < j) {

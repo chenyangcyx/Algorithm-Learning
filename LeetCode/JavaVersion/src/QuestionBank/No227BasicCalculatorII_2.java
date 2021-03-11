@@ -5,18 +5,15 @@ import java.util.LinkedList;
 
 public class No227BasicCalculatorII_2 {
     // 定义一个运算符的优先顺序表
-    HashMap<Character, Integer> op_map = new HashMap<>() {
-        {
-            put('+', 1);
-            put('-', 1);
-            put('*', 2);
-            put('/', 2);
-            put('%', 3);
-            put('^', 3);
-        }
-    };
+    HashMap<Character, Integer> op_map = new HashMap<>();
 
     public int calculate(String s) {
+        op_map.put('+', 1);
+        op_map.put('-', 1);
+        op_map.put('*', 2);
+        op_map.put('/', 2);
+        op_map.put('%', 3);
+        op_map.put('^', 3);
         // 将s中的所有空格去掉
         // 将所有的(-形式转换成(0-的形式
         // 最后将s转换成数组
