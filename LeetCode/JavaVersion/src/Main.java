@@ -1,8 +1,8 @@
-import QuestionBank.No46Permutations;
+import QuestionBank.No47PermutationsII;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums=new int[]{1,2,3,4};
-        new No46Permutations().permute(nums);
+        int []nums=new int[]{1,1,2};
+        new No47PermutationsII().permuteUnique(nums);
     }
 }
