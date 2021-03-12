@@ -1,8 +1,14 @@
-import CSNotes.Backtracking.No93RestoreIPAddresses;
+import CSNotes.Backtracking.No79WordSearch;
 
 public class Main {
     public static void main(String[] args) {
-        String str="25525511135";
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str));
+        char[][] board = new char[][]{
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
+        };
+        System.out.println(new No79WordSearch().exist(board, "ABCCED"));
+        System.out.println(new No79WordSearch().exist(board, "SEE"));
+        System.out.println(new No79WordSearch().exist(board, "ABCB"));
     }
 }
