@@ -1,8 +1,8 @@
-import CSNotes.Backtracking.No46Permutations;
+import CSNotes.Backtracking.No47PermutationsII;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums=new int[]{1,2,3,4};
-        System.out.println(new No46Permutations().permute(nums));
+        int []nums=new int[]{1,1,2,2};
+        System.out.println(new No47PermutationsII().permuteUnique(nums));
     }
 }
