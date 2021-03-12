@@ -1,8 +1,8 @@
-import CSNotes.Backtracking.No17LetterCombinationsofaPhoneNumber;
+import CSNotes.Backtracking.No93RestoreIPAddresses;
 
 public class Main {
     public static void main(String[] args) {
-        String str="23";
-        System.out.println(new No17LetterCombinationsofaPhoneNumber().letterCombinations(str));
+        String str="25525511135";
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str));
     }
 }
