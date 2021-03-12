@@ -1,8 +1,8 @@
-import CSNotes.Backtracking.No39CombinationSum;
+import CSNotes.Backtracking.No40CombinationSumII;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums=new int[]{2,3,6,7};
-        System.out.println(new No39CombinationSum().combinationSum(nums,7));
+        int []nums=new int[]{10, 1, 2, 7, 6, 1, 5};
+        System.out.println(new No40CombinationSumII().combinationSum2(nums,8));
     }
 }
