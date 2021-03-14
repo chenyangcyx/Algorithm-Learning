@@ -1,10 +1,12 @@
+package Contest2;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class No2_2 {
+    public void No2_2(){
         Scanner sc=new Scanner(System.in);
         int T=Integer.parseInt(sc.nextLine());
         while (T-->0){
