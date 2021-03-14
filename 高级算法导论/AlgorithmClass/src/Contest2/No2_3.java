@@ -1,9 +1,12 @@
-import java.util.*;
+package Contest2;
 
-public class Main {
-    static int max_depth = Integer.MIN_VALUE;
+import java.util.HashMap;
+import java.util.Scanner;
 
-    public static void main(String[] args) {
+public class No2_3 {
+    int max_depth = Integer.MIN_VALUE;
+
+    public void No2_3() {
         Scanner sc = new Scanner(System.in);
         int T = Integer.parseInt(sc.nextLine());
         while (T-- > 0) {
@@ -29,7 +32,7 @@ public class Main {
         }
     }
 
-    private static void dfs(int[][] graph, boolean[] vis, int depth, int start_node) {
+    private void dfs(int[][] graph, boolean[] vis, int depth, int start_node) {
         max_depth = Integer.max(max_depth, depth);
         for (int i = 0; i < graph[0].length; i++) {
             if (!vis[i] && graph[start_node][i] == 1) {
