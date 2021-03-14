@@ -1,36 +1,6 @@
 import java.util.*;
 
 public class Main {
-    static class Point {
-        double x, y;
-
-        public Point() {
-            this.x = 0d;
-            this.y = 0d;
-        }
-
-        public Point(double x, double y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public double getX() {
-            return x;
-        }
-
-        public void setX(double x) {
-            this.x = x;
-        }
-
-        public double getY() {
-            return y;
-        }
-
-        public void setY(double y) {
-            this.y = y;
-        }
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
@@ -38,127 +8,72 @@ public class Main {
         while (T-- > 0) {
             String str = sc.nextLine();
             String[] split = str.split(",");
-            Point[] allpoint = new Point[split.length];
-            int add_index = 0;
+            HashSet<Character> allnode_char = new HashSet<>();
             for (String _str : split) {
-                String[] _split = _str.split(" ");
-                double _x = Double.parseDouble(_split[0]);
-                double _y = Double.parseDouble(_split[1]);
-                allpoint[add_index++] = new Point(_x, _y);
+                char node1 = _str.charAt(0);
+                char node2 = _str.charAt(2);
+                allnode_char.add(node1);
+                allnode_char.add(node2);
             }
-            // 对点的集合进行排序
-            Arrays.sort(allpoint, (o1, o2) -> {
-                if (o1.getX() < o2.getX()) return -1;
-                else if (o1.getX() == o2.getX()) {
-                    if (o1.getY() <= o1.getY()) return -1;
-                    else return 1;
-                }
-                return 1;
-            });
-            // 获取计算结果
-            List<Point[]> result = getNearest(allpoint, 0, allpoint.length - 1);
-            // 将结果排序
-            Collections.sort(result, (o1, o2) -> {
-                if (o1[0].getX() < o2[0].getX()) {
-                    return -1;
-                } else if (o1[0].getX() > o2[0].getX()) {
-                    return 1;
-                }
-                return 0;
-            });
-            // 输出结果
-            for (int i = 0; i < result.size(); i++) {
-                if (i != 0) System.out.print(",");
-                System.out.print(formatPoint(result.get(i)[0]) + "," + formatPoint(result.get(i)[1]));
+            int node_num = allnode_char.size();
+            int[][] graph = new int[node_num][node_num];
+            int[] in_num = new int[node_num];
+            for (String _str : split) {
+                int node1 = _str.charAt(0) - 'a';
+                int node2 = _str.charAt(2) - 'a';
+                graph[node1][node2] = graph[node2][node1] = 1;
+                in_num[node2]++;
             }
+//            // 输出所有的map内容
+//            for (int i = 0; i < node_num; i++) {
+//                for (int j = 0; j < node_num; j++)
+//                    System.out.print(graph[i][j] + " ");
+//                System.out.println();
+//            }
+            // 开始进行拓扑排序
+            ArrayList<LinkedList<Integer>> result = new ArrayList<>();
+            boolean[] vis = new boolean[node_num];
+            dfs(graph, in_num, vis, result, new LinkedList<>());
+            System.out.println(result.size());
         }
     }
 
-    private static String formatPoint(Point p) {
-        StringBuilder sb = new StringBuilder();
-        double x = p.getX();
-        double y = p.getY();
-        if (x == (int) x) sb.append((int) x);
-        else sb.append(x);
-        sb.append(" ");
-        if (y == (int) y) sb.append((int) y);
-        else sb.append(y);
-        return sb.toString();
-    }
-
-    private static double calDis(Point a, Point b) {
-        return Math.sqrt((a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY() - b.getY()) * (a.getY() - b.getY()));
-    }
-
-    public static List<Point[]> getNearest(Point[] points, int left, int right) {
-        //若只有一个点，则不存在最近点对的情况
-        if (left == right) return new ArrayList<>();
-        //若只有两个点，则它们就是最近点
-        if (right == left + 1) {
-            Point[] nearest = new Point[]{points[left], points[right]};
-            List<Point[]> res = new ArrayList<>();
-            res.add(nearest);
-            return res;
+    private static void dfs(int[][] graph, int[] in_num, boolean[] vis, ArrayList<LinkedList<Integer>> result, LinkedList<Integer> path) {
+        if (path.size() >= graph.length) {
+//            System.out.println("找到一个结果，加入！");
+            result.add(new LinkedList<>(path));
+            return;
         }
-        //不止两个点的情况下，划分左右区间，分别取左右区间的最近点对集合
-        int mid = (left + right) / 2;
-        List<Point[]> leftNearest = getNearest(points, left, mid);
-        List<Point[]> rightNearest = getNearest(points, mid + 1, right);
-        double leftMinDistance = leftNearest.size() == 0 ? Double.MAX_VALUE : calDis(leftNearest.get(0)[0], leftNearest.get(0)[1]);
-        double rightMinDistance = rightNearest.size() == 0 ? Double.MAX_VALUE : calDis(rightNearest.get(0)[0], rightNearest.get(0)[1]);
-        //比较左右区间的最近点距离，更新当前区间的最近点距离以及最近点集合
-        double minDistance = 0.0;
-        List<Point[]> nearest = new ArrayList<>();
-        if (leftMinDistance < rightMinDistance) {
-            minDistance = leftMinDistance;
-            nearest.addAll(leftNearest);
-        } else if (leftMinDistance > rightMinDistance) {
-            minDistance = rightMinDistance;
-            nearest.addAll(rightNearest);
-        } else {
-            minDistance = leftMinDistance;
-            nearest.addAll(leftNearest);
-            nearest.addAll(rightNearest);
+        // 获取所有入度为0的节点
+        LinkedList<Integer> zeros = new LinkedList<>();
+        LinkedList<Integer> deleted = new LinkedList<>();
+        for (int i = 0; i < in_num.length; i++) {
+            if (in_num[i] == 0 && !vis[i]) zeros.addLast(i);
         }
-        //处理最近点对一个点在左区间，另一个点在右区间的情况
-        //在左区间检索到中间线距离<= minDistance的点，在右区间检索到中间线距离>= minDistance的点
-        //记录检索到的点的索引
-        List<Integer> leftIndex = new ArrayList<>();
-        List<Integer> rightIndex = new ArrayList<>();
-        for (int i = mid; i >= 0; i--) {
-            if (points[mid].getX() - points[i].getX() <= minDistance) {
-                leftIndex.add(i);
-            } else {
-                break;
-            }
-        }
-        for (int i = mid + 1; i <= right; i++) {
-            if (points[i].getX() - points[mid].getX() <= minDistance) {
-                rightIndex.add(i);
-            } else {
-                break;
-            }
-        }
-        for (int i = 0; i < leftIndex.size(); i++) {
-            for (int j = 0; j < rightIndex.size(); j++) {
-                Point leftPoint = points[leftIndex.get(i)];
-                Point rightPoint = points[rightIndex.get(j)];
-                //若两个点在y轴方向上的距离> minDistance，则跳过距离计算
-                if (Math.abs(leftPoint.getY() - rightPoint.getY()) > minDistance) {
-                    continue;
-                }
-                double tempDistance = calDis(leftPoint, rightPoint);
-                if (tempDistance < minDistance) {
-                    //若距离小于当前最小距离，更新minDistance，并删除原有最近点对集合，将该点对插入
-                    minDistance = tempDistance;
-                    nearest = new ArrayList<>();
-                    nearest.add(new Point[]{leftPoint, rightPoint});
-                } else if (tempDistance == minDistance) {
-                    //若距离等于当前最小距离，将点对插入最近点对集合
-                    nearest.add(new Point[]{leftPoint, rightPoint});
+//        System.out.println("zeros的节点：" + zeros.toString());
+        // 遍历所有节点，尝试
+        for (int i = 0; i < zeros.size(); i++) {
+            path.add(zeros.get(i));
+            vis[zeros.get(i)] = true;
+            for (int n = 0; n < in_num.length; n++) {
+                if (graph[zeros.get(i)][n] == 1 || graph[n][zeros.get(i)] == 1) {
+                    graph[zeros.get(i)][n] = graph[n][zeros.get(i)] = 0;
+                    in_num[n]--;
+                    deleted.addLast(n);
                 }
             }
+//            System.out.println("被删除入度的节点：" + deleted.toString());
+            // 输出更新之后in_num矩阵
+//            System.out.println("更新之后in_num矩阵：" + Arrays.toString(in_num));
+//            System.out.println("此时的path：" + path.toString());
+            dfs(graph, in_num, vis, result, path);
+            vis[zeros.get(i)] = false;
+            path.pollLast();
+            for (int j = 0; j < deleted.size(); j++) {
+                graph[zeros.get(i)][deleted.get(j)] = graph[deleted.get(j)][zeros.get(i)] = 1;
+                in_num[deleted.get(j)]++;
+            }
+            deleted.pollLast();
         }
-        return nearest;
     }
 }
