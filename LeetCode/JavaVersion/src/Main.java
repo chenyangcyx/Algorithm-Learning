@@ -1,5 +1,8 @@
+import CSNotes.Backtracking.No51NQueens;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE/2);
+        int n=4;
+        System.out.println(new No51NQueens().solveNQueens(n));
     }
 }
