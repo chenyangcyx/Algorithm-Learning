@@ -1,8 +1,7 @@
-import QuestionBank.No54SpiralMatrix;
+import QuestionBank.No59SpiralMatrixII;
 
 public class Main {
     public static void main(String[] args) {
-        int [][]matrix=new int[][]{{1,2,3},{4,5,6},{7,8,9}};
-        new No54SpiralMatrix().spiralOrder2(matrix);
+        new No59SpiralMatrixII().generateMatrix(4);
     }
 }
