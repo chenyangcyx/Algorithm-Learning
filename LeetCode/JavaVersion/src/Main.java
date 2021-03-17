@@ -1,7 +1,7 @@
-import QuestionBank.No59SpiralMatrixII;
+import QuestionBank.No115DistinctSubsequences;
 
 public class Main {
     public static void main(String[] args) {
-        new No59SpiralMatrixII().generateMatrix(4);
+        System.out.println(new No115DistinctSubsequences().numDistinct("babgbag","bag"));
     }
 }
