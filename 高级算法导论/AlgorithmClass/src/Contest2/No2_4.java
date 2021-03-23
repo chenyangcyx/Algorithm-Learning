@@ -1,12 +1,15 @@
+package Contest2;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Main {
-    static int min_value = Integer.MAX_VALUE;
-    static ArrayList<LinkedList<Integer>> result=new ArrayList<>();
+public class No2_4 {
+    int min_value = Integer.MAX_VALUE;
+    ArrayList<LinkedList<Integer>> result = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public void No2_4() {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T-- > 0) {
@@ -46,7 +49,7 @@ public class Main {
         }
     }
 
-    private static void dfs(int[][] weight, boolean[] used, int N, LinkedList<Integer> path) {
+    private void dfs(int[][] weight, boolean[] used, int N, LinkedList<Integer> path) {
         if (path.size() >= N) {
             int sum = 0;
             for (int i = 1; i <= N; i++) sum += weight[i][path.get(i - 1)];
