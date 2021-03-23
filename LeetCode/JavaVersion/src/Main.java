@@ -1,7 +1,8 @@
-import QuestionBank.No191Numberof1Bits;
+import QuestionBank.No3LongestSubstringWithoutRepeatingCharacters;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new No191Numberof1Bits().hammingWeight(1024));
+        String str="dvdf";
+        System.out.println(new No3LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(str));
     }
 }
