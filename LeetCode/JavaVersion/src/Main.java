@@ -1,8 +1,8 @@
-import QuestionBank.No3LongestSubstringWithoutRepeatingCharacters;
+import QuestionBank.No5LongestPalindromicSubstring;
 
 public class Main {
     public static void main(String[] args) {
-        String str="dvdf";
-        System.out.println(new No3LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(str));
+        String str="cbbd";
+        System.out.println(new No5LongestPalindromicSubstring().longestPalindrome(str));
     }
 }
