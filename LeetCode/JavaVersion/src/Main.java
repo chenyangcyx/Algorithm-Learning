@@ -1,16 +1,19 @@
-import QuestionBank.No146LRUCache;
+import QuestionBank.No8StringtoInteger_atoi;
 
 public class Main {
     public static void main(String[] args) {
-        No146LRUCache cc=new No146LRUCache(2);
-        cc.put(1,1);
-        cc.put(2,2);
-        System.out.println(cc.get(1));
-        cc.put(3,3);
-        System.out.println(cc.get(2));
-        cc.put(4,4);
-        System.out.println(cc.get(1));
-        System.out.println(cc.get(3));
-        System.out.println(cc.get(4));
+        String str1="42";
+        String str2="-42";
+        String str3="4193 with words";
+        String str4="words and 987";
+        String str5="-91283472332";
+        String str6="00000-42a1234";
+        No8StringtoInteger_atoi si=new No8StringtoInteger_atoi();
+        System.out.println(si.myAtoi(str1));
+        System.out.println(si.myAtoi(str2));
+        System.out.println(si.myAtoi(str3));
+        System.out.println(si.myAtoi(str4));
+        System.out.println(si.myAtoi(str5));
+        System.out.println(si.myAtoi(str6));
     }
 }
