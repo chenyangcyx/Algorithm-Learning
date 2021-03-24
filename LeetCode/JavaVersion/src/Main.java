@@ -1,10 +1,15 @@
-import QuestionBank.No815BusRoutes;
+import QuestionBank.No7ReverseInteger;
 
 public class Main {
     public static void main(String[] args) {
-        No815BusRoutes br=new No815BusRoutes();
-        int [][]nums1=new int[][]{{1,2,7},{3,6,7}};
-        int [][]nums2=new int[][]{{1,7},{3,5}};
-        System.out.println(br.numBusesToDestination(nums1,1,6));
+        int num1=123;
+        int num2=-123;
+        int num3=120;
+        int num4=0;
+        No7ReverseInteger ri=new No7ReverseInteger();
+        System.out.println(ri.reverse(num1));
+        System.out.println(ri.reverse(num2));
+        System.out.println(ri.reverse(num3));
+        System.out.println(ri.reverse(num4));
     }
 }
