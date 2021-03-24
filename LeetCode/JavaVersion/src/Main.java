@@ -1,19 +1,13 @@
-import QuestionBank.No8StringtoInteger_atoi;
+import QuestionBank.No456132Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String str1="42";
-        String str2="-42";
-        String str3="4193 with words";
-        String str4="words and 987";
-        String str5="-91283472332";
-        String str6="00000-42a1234";
-        No8StringtoInteger_atoi si=new No8StringtoInteger_atoi();
-        System.out.println(si.myAtoi(str1));
-        System.out.println(si.myAtoi(str2));
-        System.out.println(si.myAtoi(str3));
-        System.out.println(si.myAtoi(str4));
-        System.out.println(si.myAtoi(str5));
-        System.out.println(si.myAtoi(str6));
+        int []nums1=new int[]{1,2,3,4};
+        int []nums2=new int[]{3,1,4,2};
+        int []nums3=new int[]{-1,3,2,0};
+        No456132Pattern pp=new No456132Pattern();
+        System.out.println(pp.find132pattern(nums1));
+        System.out.println(pp.find132pattern(nums2));
+        System.out.println(pp.find132pattern(nums3));
     }
 }
