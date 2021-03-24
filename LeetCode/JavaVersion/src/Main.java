@@ -1,15 +1,15 @@
-import QuestionBank.No7ReverseInteger;
+import QuestionBank.No9PalindromeNumber;
 
 public class Main {
     public static void main(String[] args) {
-        int num1=123;
-        int num2=-123;
-        int num3=120;
-        int num4=0;
-        No7ReverseInteger ri=new No7ReverseInteger();
-        System.out.println(ri.reverse(num1));
-        System.out.println(ri.reverse(num2));
-        System.out.println(ri.reverse(num3));
-        System.out.println(ri.reverse(num4));
+        int x1=121;
+        int x2=-121;
+        int x3=10;
+        int x4=-101;
+        No9PalindromeNumber pn=new No9PalindromeNumber();
+        System.out.println(pn.isPalindrome(x1));
+        System.out.println(pn.isPalindrome(x2));
+        System.out.println(pn.isPalindrome(x3));
+        System.out.println(pn.isPalindrome(x4));
     }
 }
