@@ -1,13 +1,11 @@
-import QuestionBank.No15_3Sum;
+import QuestionBank.No18_4Sum;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums1=new int[]{-1,0,1,2,-1,-4};
-        int []nums2=new int[0];
-        int []nums3=new int[]{0};
-        No15_3Sum sum=new No15_3Sum();
-        System.out.println(sum.threeSum2(nums1));
-        System.out.println(sum.threeSum2(nums2));
-        System.out.println(sum.threeSum2(nums3));
+        int []nums1=new int[]{0,0,0,0};
+        int []nums2=new int[]{0,4,-5,2,-2,4,2,-1,4};
+        No18_4Sum ss=new No18_4Sum();
+        System.out.println(ss.fourSum(nums1,0));
+        System.out.println(ss.fourSum(nums2,12));
     }
 }
