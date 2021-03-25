@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaVersion/NowCoder.iml" filepath="$PROJECT_DIR$/JavaVersion/NowCoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NowCoder.iml" filepath="$PROJECT_DIR$/NowCoder.iml" />
     </modules>
   </component>
 </project>
