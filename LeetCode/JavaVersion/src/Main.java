@@ -1,8 +1,8 @@
-import QuestionBank.No53MaximumSubarray;
+import QuestionBank.No42TrappingRainWater;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums=new int[]{-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println(new No53MaximumSubarray().maxSubArray(nums));
+        int []nums=new int[]{0,1,0,2,1,0,1,3,2,1,2,1};
+        System.out.println(new No42TrappingRainWater().trap(nums));
     }
 }
