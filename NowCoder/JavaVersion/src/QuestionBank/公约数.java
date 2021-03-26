@@ -1,10 +1,13 @@
-import java.util.*;
+package QuestionBank;
 
-public class Main {
-    static int result = 0;
-    static boolean[] used;
+import java.util.LinkedList;
+import java.util.Scanner;
 
-    public static void main(String[] args) {
+public class 公约数 {
+    int result = 0;
+    boolean[] used;
+
+    public void 公约数() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(), K = sc.nextInt(), A = sc.nextInt(), B = sc.nextInt();
         int[] nums = new int[n];
@@ -14,7 +17,7 @@ public class Main {
         System.out.println(result);
     }
 
-    private static void dfs(LinkedList<Integer> path, int[] nums,int index, int K, int A, int B){
+    private void dfs(LinkedList<Integer> path, int[] nums, int index, int K, int A, int B) {
         if (path.size() == K) {
             if (gcdResult(path, A) >= B) result++;
             return;
@@ -30,7 +33,7 @@ public class Main {
         }
     }
 
-    private static int gcdResult(LinkedList<Integer> path, int A) {
+    private int gcdResult(LinkedList<Integer> path, int A) {
         int t = 1;
         for (int num : path) {
             t = gcd(num * t, A);
@@ -38,7 +41,7 @@ public class Main {
         return t;
     }
 
-    private static int gcd(int a, int b) {
+    private int gcd(int a, int b) {
         return b == 0 ? a : gcd(b, a % b);
     }
 }
