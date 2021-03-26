@@ -1,9 +1,13 @@
-import QuestionBank.No33SearchinRotatedSortedArray;
+import QuestionBank.No56MergeIntervals;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums1=new int[]{4,5,6,7,0,1,2};
-        No33SearchinRotatedSortedArray srs=new No33SearchinRotatedSortedArray();
-        System.out.println(srs.search(nums1,0));
+        int [][]nums=new int[][]{{1,3},{2,6},{8,10},{15,18}};
+        No56MergeIntervals mi=new No56MergeIntervals();
+        int [][]result=mi.merge(nums);
+        for(int []line:result){
+            for(int num:line) System.out.print(num+" ");
+            System.out.println();
+        }
     }
 }
