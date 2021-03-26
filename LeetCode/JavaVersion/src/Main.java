@@ -1,13 +1,18 @@
-import QuestionBank.No56MergeIntervals;
+import QuestionBank.No14LongestCommonPrefix;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [][]nums=new int[][]{{1,3},{2,6},{8,10},{15,18}};
-        No56MergeIntervals mi=new No56MergeIntervals();
-        int [][]result=mi.merge(nums);
-        for(int []line:result){
-            for(int num:line) System.out.print(num+" ");
-            System.out.println();
-        }
+        String []strs1=new String[]{"flower","flow","flight"};
+        String []strs2=new String[]{"dog","racecar","car"};
+        No14LongestCommonPrefix lcp=new No14LongestCommonPrefix();
+        System.out.println(lcp.longestCommonPrefix(strs1));
+        System.out.println(lcp.longestCommonPrefix(strs2));
+
+        lcp.longestCommonPrefix2(strs1);
+        lcp.longestCommonPrefix2(strs2);
+        System.out.println(Arrays.toString(strs1));
+        System.out.println(Arrays.toString(strs2));
     }
 }
