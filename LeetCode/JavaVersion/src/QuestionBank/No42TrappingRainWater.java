@@ -3,8 +3,8 @@ package QuestionBank;
 import java.util.*;
 
 public class No42TrappingRainWater {
-    // 自己写的
-    public int trap(int[] height) {
+    // 自己写的1
+    public int trap_my1(int[] height) {
         int N = height.length;
         if (N < 3) return 0;
         int max = height[0];
@@ -20,6 +20,26 @@ public class No42TrappingRainWater {
                     res = 0;
                 } else if (height[i] < h && have) res++;
             }
+        }
+        return result;
+    }
+
+    // 自己写的2
+    public int trap_my2(int[] height) {
+        int N = height.length;
+        if (N == 0) return 0;
+        int[] left_max = new int[N], right_max = new int[N];
+        left_max[0] = height[0];
+        right_max[N - 1] = height[N - 1];
+        for (int i = 1; i < N; i++) {
+            left_max[i] = Integer.max(left_max[i - 1], height[i]);
+        }
+        for (int i = N - 2; i >= 0; i--) {
+            right_max[i] = Integer.max(right_max[i + 1], height[i]);
+        }
+        int result = 0;
+        for (int i = 1; i < N - 1; i++) {
+            result += Integer.min(left_max[i], right_max[i]) - height[i];
         }
         return result;
     }
