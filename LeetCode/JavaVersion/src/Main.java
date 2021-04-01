@@ -1,9 +1,12 @@
-import QuestionBank.No1006ClumsyFactorial;
+import QuestionBank.No31NextPermutation;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        No1006ClumsyFactorial cf=new No1006ClumsyFactorial();
-        System.out.println(cf.clumsy_my2(4));
-        System.out.println(cf.clumsy_my2(10));
+        int []nums=new int[]{4,5,2,6,3,1};
+        No31NextPermutation np=new  No31NextPermutation();
+        np.nextPermutation(nums);
+        System.out.println(Arrays.toString(nums));
     }
 }
