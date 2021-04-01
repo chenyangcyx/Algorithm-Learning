@@ -1,12 +1,16 @@
-import QuestionBank.No31NextPermutation;
-
-import java.util.Arrays;
+import QuestionBank.No93RestoreIPAddresses;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums=new int[]{4,5,2,6,3,1};
-        No31NextPermutation np=new  No31NextPermutation();
-        np.nextPermutation(nums);
-        System.out.println(Arrays.toString(nums));
+        String str1="25525511135";
+        String str2="0000";
+        String str3="1111";
+        String str4="010010";
+        String str5="101023";
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str1).toString());
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str2).toString());
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str3).toString());
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str4).toString());
+        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str5).toString());
     }
 }
