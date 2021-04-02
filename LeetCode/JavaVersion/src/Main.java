@@ -1,16 +1,9 @@
-import QuestionBank.No93RestoreIPAddresses;
+import QuestionBank.面试题17_21_VolumeofHistogramLCCI;
 
 public class Main {
     public static void main(String[] args) {
-        String str1="25525511135";
-        String str2="0000";
-        String str3="1111";
-        String str4="010010";
-        String str5="101023";
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str1).toString());
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str2).toString());
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str3).toString());
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str4).toString());
-        System.out.println(new No93RestoreIPAddresses().restoreIpAddresses(str5).toString());
+        面试题17_21_VolumeofHistogramLCCI vhc=new 面试题17_21_VolumeofHistogramLCCI();
+        int []nums=new int[]{0,1,0,2,1,0,1,3,2,1,2,1};
+        System.out.println(vhc.trap(nums));
     }
 }
