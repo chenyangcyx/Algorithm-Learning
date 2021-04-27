@@ -1,13 +1,11 @@
-import QuestionBank.No101_200.No153FindMinimuminRotatedSortedArray;
+import QuestionBank.No101_200.No121BestTimetoBuyandSellStock;
 
 public class Main {
     public static void main(String[] args) {
-        int []nums1=new int[]{3,4,5,1,2};
-        int []nums2=new int[]{4,5,6,7,0,1,2};
-        int []nums3=new int[]{11,13,15,17};
-        No153FindMinimuminRotatedSortedArray fmrs=new No153FindMinimuminRotatedSortedArray();
-        System.out.println(fmrs.findMin(nums1));
-        System.out.println(fmrs.findMin(nums2));
-        System.out.println(fmrs.findMin(nums3));
+        int []nums1=new int[]{7,1,5,3,6,4};
+        int []nums2=new int[]{7,6,4,3,1};
+        No121BestTimetoBuyandSellStock btbss=new No121BestTimetoBuyandSellStock();
+        System.out.println(btbss.maxProfit(nums1));
+        System.out.println(btbss.maxProfit(nums2));
     }
 }
