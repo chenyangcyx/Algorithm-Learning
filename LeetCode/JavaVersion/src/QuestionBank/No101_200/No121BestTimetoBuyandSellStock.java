@@ -16,9 +16,8 @@ public class No121BestTimetoBuyandSellStock {
         return max_value;
     }
 
-    // LeetCode 官方题解
-    /*
-    public int maxProfit(int prices[]) {
+    // LeetCode 官方题解1
+    public int maxProfit2(int prices[]) {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -30,5 +29,19 @@ public class No121BestTimetoBuyandSellStock {
         }
         return maxprofit;
     }
-    */
+
+    // 动态规划
+    // dp[i]=max(dp[i−1],prices[i]−minprice)
+    public int maxProfit3(int prices[]) {
+        int len = prices.length;
+        if (len == 0) return 0;
+        int minprice = prices[0];
+        int[] dp = new int[len];
+        dp[0] = 0;
+        for (int i = 1; i < len; i++) {
+            minprice = Math.min(minprice, prices[i]);
+            dp[i] = Math.max(dp[i - 1], prices[i] - minprice);
+        }
+        return dp[len - 1];
+    }
 }
