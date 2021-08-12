@@ -1,7 +1,7 @@
 package QuestionBank.No401_500;
 
 
-public class No457_CircularArrayLoop {
+public class No457CircularArrayLoop {
     public boolean circularArrayLoop1(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int start = i;
@@ -69,7 +69,7 @@ public class No457_CircularArrayLoop {
         int[] num5 = new int[]{-1};
         int[] num6 = new int[]{-2, -17, -1, -2, -2};
 
-        No457_CircularArrayLoop no457_circularArrayLoop = new No457_CircularArrayLoop();
+        No457CircularArrayLoop no457_circularArrayLoop = new No457CircularArrayLoop();
 
         System.out.println(no457_circularArrayLoop.circularArrayLoop1(num1));
         System.out.println(no457_circularArrayLoop.circularArrayLoop1(num2));
