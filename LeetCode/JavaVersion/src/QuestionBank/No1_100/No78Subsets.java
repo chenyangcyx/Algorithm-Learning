@@ -8,7 +8,8 @@ public class No78Subsets {
         if (nums == null || nums.length == 0) {
             return result;
         }
-        dfs(result, nums, 0, new LinkedList<>());
+//        dfs(result, nums, 0, new LinkedList<>());
+        dfs2(result, nums, 0, new LinkedList<>());
         return result;
     }
 
@@ -21,6 +22,15 @@ public class No78Subsets {
         dfs(result, nums, index + 1, path);
         path.pollLast();
         dfs(result, nums, index + 1, path);
+    }
+
+    private void dfs2(List<List<Integer>> result, int[] nums, int index, LinkedList<Integer> path) {
+        result.add(new LinkedList<>(path));
+        for (int i = index; i < nums.length; i++) {
+            path.addLast(nums[i]);
+            dfs2(result, nums, i + 1, path);
+            path.pollLast();
+        }
     }
 
     public List<List<Integer>> subsets2(int[] nums) {
