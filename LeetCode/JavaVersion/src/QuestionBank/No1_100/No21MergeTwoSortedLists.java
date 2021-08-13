@@ -1,24 +1,6 @@
 package QuestionBank.No1_100;
 
 public class No21MergeTwoSortedLists {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode newhead = new ListNode(0, null);
         ListNode t1 = l1, t2 = l2, tt = newhead;
@@ -79,6 +61,24 @@ public class No21MergeTwoSortedLists {
         } else {
             l2.next = mergeTwoLists(l1, l2.next);
             return l2;
+        }
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
         }
     }
 }

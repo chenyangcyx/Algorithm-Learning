@@ -1,12 +1,11 @@
 package QuestionBank.No701_800;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class No705DesignHashSet {
-    private ArrayList<LinkedList<Integer>> buckets = new ArrayList<>();
     private final int bucket_size = 20;
+    private final ArrayList<LinkedList<Integer>> buckets = new ArrayList<>();
 
     /**
      * Initialize your data structure here.

@@ -2,6 +2,9 @@ package CSNotes.DFS;
 
 public class No200NumberofIslands {
     int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    // CS-Note 参考代码
+    private int m, n;
+    private final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public int numIslands(char[][] grid) {
         int row_num = grid.length;
@@ -23,10 +26,6 @@ public class No200NumberofIslands {
         }
         return 1;
     }
-
-    // CS-Note 参考代码
-    private int m, n;
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public int numIslands2(char[][] grid) {
         if (grid == null || grid.length == 0) {

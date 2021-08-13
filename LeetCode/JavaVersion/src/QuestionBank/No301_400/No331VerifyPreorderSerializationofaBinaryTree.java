@@ -1,7 +1,9 @@
 package QuestionBank.No301_400;
 
-import java.util.*;
-import java.util.regex.*;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class No331VerifyPreorderSerializationofaBinaryTree {
     // 自己写的，使用正则表达式

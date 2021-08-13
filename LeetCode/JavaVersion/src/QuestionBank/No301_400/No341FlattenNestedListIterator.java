@@ -8,47 +8,47 @@ import java.util.List;
  * // This is the interface that allows for creating nested lists.
  * // You should not implement it, or speculate about its implementation
  * public interface NestedInteger {
- *
- *     // @return true if this NestedInteger holds a single integer, rather than a nested list.
- *     public boolean isInteger();
- *
- *     // @return the single integer that this NestedInteger holds, if it holds a single integer
- *     // Return null if this NestedInteger holds a nested list
- *     public Integer getInteger();
- *
- *     // @return the nested list that this NestedInteger holds, if it holds a nested list
- *     // Return null if this NestedInteger holds a single integer
- *     public List<NestedInteger> getList();
+ * <p>
+ * // @return true if this NestedInteger holds a single integer, rather than a nested list.
+ * public boolean isInteger();
+ * <p>
+ * // @return the single integer that this NestedInteger holds, if it holds a single integer
+ * // Return null if this NestedInteger holds a nested list
+ * public Integer getInteger();
+ * <p>
+ * // @return the nested list that this NestedInteger holds, if it holds a nested list
+ * // Return null if this NestedInteger holds a single integer
+ * public List<NestedInteger> getList();
  * }
  */
 interface NestedInteger {
 
     // @return true if this NestedInteger holds a single integer, rather than a nested list.
-    public boolean isInteger();
+    boolean isInteger();
 
     // @return the single integer that this NestedInteger holds, if it holds a single integer
     // Return null if this NestedInteger holds a nested list
-    public Integer getInteger();
+    Integer getInteger();
 
     // @return the nested list that this NestedInteger holds, if it holds a nested list
     // Return null if this NestedInteger holds a single integer
-    public List<NestedInteger> getList();
+    List<NestedInteger> getList();
 }
 
 
 public class No341FlattenNestedListIterator implements Iterator<Integer> {
-    LinkedList<Integer> allnum=null;
-    Iterator<Integer> it=null;
+    LinkedList<Integer> allnum = null;
+    Iterator<Integer> it = null;
 
     public No341FlattenNestedListIterator(List<NestedInteger> nestedList) {
-        allnum=new LinkedList<>();
+        allnum = new LinkedList<>();
         dfs(nestedList);
-        it= allnum.iterator();
+        it = allnum.iterator();
     }
 
-    private void dfs(List<NestedInteger> list){
-        for(NestedInteger va:list){
-            if(va.isInteger()) allnum.add(va.getInteger());
+    private void dfs(List<NestedInteger> list) {
+        for (NestedInteger va : list) {
+            if (va.isInteger()) allnum.add(va.getInteger());
             else {
                 dfs(va.getList());
             }

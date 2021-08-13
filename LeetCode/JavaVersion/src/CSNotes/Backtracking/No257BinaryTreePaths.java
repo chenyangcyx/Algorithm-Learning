@@ -1,28 +1,9 @@
 package CSNotes.Backtracking;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class No257BinaryTreePaths {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new ArrayList<>();
         if (root == null) return result;
@@ -88,5 +69,25 @@ public class No257BinaryTreePaths {
             }
         }
         return str.toString();
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

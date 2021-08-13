@@ -5,6 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 
 public class No763PartitionLabels {
+    public static void main(String[] args) {
+        String s1 = "ababcbacadefegdehijhklij";
+        String s2 = "caedbdedda";
+        String s3 = "eaaaabaaec";
+
+        No763PartitionLabels no763PartitionLabels = new No763PartitionLabels();
+
+        System.out.println(no763PartitionLabels.partitionLabels1(s1));
+        System.out.println(no763PartitionLabels.partitionLabels1(s2));
+        System.out.println(no763PartitionLabels.partitionLabels1(s3));
+    }
+
     public List<Integer> partitionLabels1(String s) {
         if (s == null || s.length() == 0) {
             return new ArrayList<>();
@@ -50,17 +62,5 @@ public class No763PartitionLabels {
             }
         }
         return partition;
-    }
-
-    public static void main(String[] args) {
-        String s1 = "ababcbacadefegdehijhklij";
-        String s2 = "caedbdedda";
-        String s3 = "eaaaabaaec";
-
-        No763PartitionLabels no763PartitionLabels = new No763PartitionLabels();
-
-        System.out.println(no763PartitionLabels.partitionLabels1(s1));
-        System.out.println(no763PartitionLabels.partitionLabels1(s2));
-        System.out.println(no763PartitionLabels.partitionLabels1(s3));
     }
 }

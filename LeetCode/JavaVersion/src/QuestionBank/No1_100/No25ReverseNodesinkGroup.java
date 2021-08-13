@@ -1,26 +1,6 @@
 package QuestionBank.No1_100;
 
-import java.util.List;
-
 public class No25ReverseNodesinkGroup {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode newhead = new ListNode(0, head);
         ListNode next_handle = newhead, prehead = newhead;
@@ -54,6 +34,24 @@ public class No25ReverseNodesinkGroup {
             cur = next;
         }
         return pre;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }
 

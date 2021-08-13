@@ -2,39 +2,39 @@ package QuestionBank.No101_200;
 
 public class No169MajorityElement {
     public int majorityElement1(int[] nums) {
-        for(int i= nums.length/2;i>=0;i--){
-            adjustHeap(nums,i, nums.length);
+        for (int i = nums.length / 2; i >= 0; i--) {
+            adjustHeap(nums, i, nums.length);
         }
-        for(int i= nums.length-1;i>0;i--){
-            nums[0]=nums[0]^nums[i];
-            nums[i]=nums[0]^nums[i];
-            nums[0]=nums[0]^nums[i];
-            adjustHeap(nums,0,i);
+        for (int i = nums.length - 1; i > 0; i--) {
+            nums[0] = nums[0] ^ nums[i];
+            nums[i] = nums[0] ^ nums[i];
+            nums[0] = nums[0] ^ nums[i];
+            adjustHeap(nums, 0, i);
         }
-        return nums[nums.length/2];
+        return nums[nums.length / 2];
     }
 
-    private void adjustHeap(int[] nums,int parent_index,int length){
-        int temp=nums[parent_index];
-        int child=2*parent_index+1;
-        while (child<length){
-            if(child+1<length&&nums[child+1]>nums[child]) child++;
-            if(temp>=nums[child]) break;
-            nums[parent_index]=nums[child];
-            parent_index=child;
-            child=2*child+1;
+    private void adjustHeap(int[] nums, int parent_index, int length) {
+        int temp = nums[parent_index];
+        int child = 2 * parent_index + 1;
+        while (child < length) {
+            if (child + 1 < length && nums[child + 1] > nums[child]) child++;
+            if (temp >= nums[child]) break;
+            nums[parent_index] = nums[child];
+            parent_index = child;
+            child = 2 * child + 1;
         }
-        nums[parent_index]=temp;
+        nums[parent_index] = temp;
     }
 
     public int majorityElement2(int[] nums) {
-        int now_num=0;
-        int count=0;
-        for(int num:nums){
-            if(count==0){
-                now_num=num;
+        int now_num = 0;
+        int count = 0;
+        for (int num : nums) {
+            if (count == 0) {
+                now_num = num;
             }
-            if(now_num==num) count++;
+            if (now_num == num) count++;
             else count--;
         }
         return now_num;

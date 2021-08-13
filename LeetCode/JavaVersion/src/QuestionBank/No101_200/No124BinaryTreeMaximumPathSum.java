@@ -4,25 +4,9 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 public class No124BinaryTreeMaximumPathSum {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+    // 自己写的代码2
+    // 带最大路径
+    int max_length = Integer.MIN_VALUE;
 
     // 自己写的代码1
 /*
@@ -41,23 +25,7 @@ public class No124BinaryTreeMaximumPathSum {
         return node.val + Integer.max(left_num, right_num);
     }
 */
-
-    // 自己写的代码2
-    // 带最大路径
-    int max_length = Integer.MIN_VALUE;
     HashSet<TreeNode> result_set = new HashSet<>();
-
-    class NodeRoute {
-        TreeNode node;
-        LinkedList<TreeNode> list = new LinkedList<>();
-        int gain_num = 0;
-
-        public NodeRoute(TreeNode n, LinkedList<TreeNode> l, int g) {
-            this.node = n;
-            this.list = l;
-            this.gain_num = g;
-        }
-    }
 
     public int maxPathSum(TreeNode root) {
         dfs(root);
@@ -96,6 +64,38 @@ public class No124BinaryTreeMaximumPathSum {
         }
         return_nr.list.add(node);
         return return_nr;
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+    class NodeRoute {
+        TreeNode node;
+        LinkedList<TreeNode> list = new LinkedList<>();
+        int gain_num = 0;
+
+        public NodeRoute(TreeNode n, LinkedList<TreeNode> l, int g) {
+            this.node = n;
+            this.list = l;
+            this.gain_num = g;
+        }
     }
 }
 

@@ -1,8 +1,9 @@
 package Concurrent;
 
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
+import java.util.LinkedList;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 /*
@@ -171,18 +172,36 @@ public class 生产者消费者 {
 
 
 public class 生产者消费者 {
+    public void execute() {
+        Storage storage = new Storage();
+        Thread p1 = new Thread(new Producer(storage));
+        Thread p2 = new Thread(new Producer(storage));
+        Thread p3 = new Thread(new Producer(storage));
+
+        Thread c1 = new Thread(new Consumer(storage));
+        Thread c2 = new Thread(new Consumer(storage));
+        Thread c3 = new Thread(new Consumer(storage));
+
+        p1.start();
+        p2.start();
+        p3.start();
+        c1.start();
+        c2.start();
+        c3.start();
+    }
+
     public class Storage {
 
         // 仓库最大存储量
         private final int MAX_SIZE = 10;
-        // 仓库存储的载体
-        private LinkedList<Object> list = new LinkedList<Object>();
         // 锁
         private final Lock lock = new ReentrantLock();
         // 仓库满的条件变量
         private final Condition full = lock.newCondition();
         // 仓库空的条件变量
         private final Condition empty = lock.newCondition();
+        // 仓库存储的载体
+        private final LinkedList<Object> list = new LinkedList<Object>();
 
         public void produce() {
             // 获得锁
@@ -269,23 +288,5 @@ public class 生产者消费者 {
                 }
             }
         }
-    }
-
-    public void execute() {
-        Storage storage = new Storage();
-        Thread p1 = new Thread(new Producer(storage));
-        Thread p2 = new Thread(new Producer(storage));
-        Thread p3 = new Thread(new Producer(storage));
-
-        Thread c1 = new Thread(new Consumer(storage));
-        Thread c2 = new Thread(new Consumer(storage));
-        Thread c3 = new Thread(new Consumer(storage));
-
-        p1.start();
-        p2.start();
-        p3.start();
-        c1.start();
-        c2.start();
-        c3.start();
     }
 }

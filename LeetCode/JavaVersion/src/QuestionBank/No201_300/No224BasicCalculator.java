@@ -3,24 +3,6 @@ package QuestionBank.No201_300;
 import java.util.LinkedList;
 
 public class No224BasicCalculator {
-    class Node {
-        int value;
-        char op;
-        boolean if_num;
-
-        public Node() {
-            this.value = 0;
-            this.op = ' ';
-            if_num = true;
-        }
-
-        public Node(int value, char op, boolean if_num) {
-            this.value = value;
-            this.op = op;
-            this.if_num = if_num;
-        }
-    }
-
     public int calculate(String s) {
         // 创建队列以及栈
         // 队列用来存储后缀表达式，栈用来存储操作符
@@ -117,5 +99,23 @@ public class No224BasicCalculator {
         }
         // 返回结果
         return op_stack.peekLast().value;
+    }
+
+    class Node {
+        int value;
+        char op;
+        boolean if_num;
+
+        public Node() {
+            this.value = 0;
+            this.op = ' ';
+            if_num = true;
+        }
+
+        public Node(int value, char op, boolean if_num) {
+            this.value = value;
+            this.op = op;
+            this.if_num = if_num;
+        }
     }
 }

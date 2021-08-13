@@ -1,24 +1,6 @@
 package CSNotes.LinkedList;
 
 public class No21MergeTwoSortedLists {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // 自己写的
     public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
         ListNode t1 = l1, t2 = l2;
@@ -78,5 +60,23 @@ public class No21MergeTwoSortedLists {
         prev.next = l1 == null ? l2 : l1;
 
         return prehead.next;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

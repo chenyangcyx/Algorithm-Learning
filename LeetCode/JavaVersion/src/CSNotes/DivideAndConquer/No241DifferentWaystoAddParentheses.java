@@ -32,7 +32,7 @@ public class No241DifferentWaystoAddParentheses {
 
             }
         }
-        if(result_list.size()==0) result_list.add(Integer.valueOf(input));
+        if (result_list.size() == 0) result_list.add(Integer.valueOf(input));
         return result_list;
     }
 

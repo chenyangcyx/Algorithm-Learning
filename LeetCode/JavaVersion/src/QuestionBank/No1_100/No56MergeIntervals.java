@@ -2,7 +2,10 @@ package QuestionBank.No1_100;
 
 import javafx.util.Pair;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class No56MergeIntervals {
     public int[][] merge(int[][] intervals) {

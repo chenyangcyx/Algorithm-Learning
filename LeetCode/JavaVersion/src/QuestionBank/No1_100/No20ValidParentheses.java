@@ -1,6 +1,6 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class No20ValidParentheses {
     public boolean isValid(String s) {

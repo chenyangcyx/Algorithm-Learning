@@ -3,25 +3,7 @@ package QuestionBank.No101_200;
 import java.util.LinkedList;
 
 public class No173BinarySearchTreeIterator {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+    LinkedList<MyNode> stack;
 
     // 自己写的方法1
     /*
@@ -48,18 +30,6 @@ public class No173BinarySearchTreeIterator {
     }
     */
 
-    // 自己写的方法2
-    class MyNode {
-        TreeNode node;
-        boolean t_l = false;
-
-        MyNode(TreeNode n) {
-            this.node = n;
-        }
-    }
-
-    LinkedList<MyNode> stack;
-
     public No173BinarySearchTreeIterator(TreeNode root) {
         stack = new LinkedList<>();
         stack.addLast(new MyNode(root));
@@ -79,6 +49,36 @@ public class No173BinarySearchTreeIterator {
 
     public boolean hasNext() {
         return !stack.isEmpty();
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
+    // 自己写的方法2
+    class MyNode {
+        TreeNode node;
+        boolean t_l = false;
+
+        MyNode(TreeNode n) {
+            this.node = n;
+        }
     }
 }
 

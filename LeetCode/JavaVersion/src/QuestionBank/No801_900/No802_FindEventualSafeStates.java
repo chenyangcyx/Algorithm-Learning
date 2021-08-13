@@ -1,8 +1,21 @@
 package QuestionBank.No801_900;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class No802_FindEventualSafeStates {
+    public static void main(String[] args) {
+        int[][] num1 = new int[][]{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}};
+
+        No802_FindEventualSafeStates no802_findEventualSafeStates = new No802_FindEventualSafeStates();
+
+        System.out.println(no802_findEventualSafeStates.eventualSafeNodes1(num1));
+
+        System.out.println(no802_findEventualSafeStates.eventualSafeNodes2(num1));
+    }
+
     public List<Integer> eventualSafeNodes1(int[][] graph) {
         int n = graph.length;
         // 反图，邻接表存储
@@ -74,15 +87,5 @@ public class No802_FindEventualSafeStates {
         }
         color[x] = 2;
         return true;
-    }
-
-    public static void main(String[] args) {
-        int[][] num1 = new int[][]{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}};
-
-        No802_FindEventualSafeStates no802_findEventualSafeStates = new No802_FindEventualSafeStates();
-
-        System.out.println(no802_findEventualSafeStates.eventualSafeNodes1(num1));
-
-        System.out.println(no802_findEventualSafeStates.eventualSafeNodes2(num1));
     }
 }

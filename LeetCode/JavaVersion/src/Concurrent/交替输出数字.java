@@ -1,9 +1,6 @@
 package Concurrent;
 
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Semaphore;
 
 
 // 使用Semaphore信号量实现
@@ -11,16 +8,16 @@ public class 交替输出数字 {
     final Semaphore s_jishu = new Semaphore(1);
     final Semaphore s_oushu = new Semaphore(0);
 
-    public void 交替输出数字(){
-        Thread t1=new Thread(new JiShu());
-        Thread t2=new Thread(new OuShu());
+    public void 交替输出数字() {
+        Thread t1 = new Thread(new JiShu());
+        Thread t2 = new Thread(new OuShu());
         t1.start();
         t2.start();
         try {
             t1.join();
             t2.join();
+        } catch (Exception e) {
         }
-        catch (Exception e){}
     }
 
     class JiShu implements Runnable {
@@ -30,17 +27,16 @@ public class 交替输出数字 {
                 try {
                     s_jishu.acquire();
                     System.out.println(i);
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
                     s_oushu.release();
                 }
             }
         }
     }
 
-    class OuShu implements Runnable{
+    class OuShu implements Runnable {
         @Override
         public void run() {
             for (int i = 2; i <= 100; i += 2) {

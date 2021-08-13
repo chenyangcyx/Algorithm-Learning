@@ -1,6 +1,7 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class No42TrappingRainWater {
     // 自己写的1

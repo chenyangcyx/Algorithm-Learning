@@ -1,16 +1,6 @@
 package CSNotes.LinkedList;
 
 public class No725SplitLinkedListinParts {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     // 自己写的
     public ListNode[] splitListToParts1(ListNode root, int k) {
         int length = 0;
@@ -22,17 +12,16 @@ public class No725SplitLinkedListinParts {
         ListNode[] result = new ListNode[k];
         int[] nodenum = new int[k];
         int ave = length / k;
-        if(ave>0){
+        if (ave > 0) {
             for (int i = 0; i < k; i++) nodenum[i] = ave;
-            if (length % k >0){
-                for(int i=0;i<length%k;i++) nodenum[i]++;
+            if (length % k > 0) {
+                for (int i = 0; i < length % k; i++) nodenum[i]++;
             }
+        } else {
+            for (int i = 0; i < length; i++) nodenum[i] = 1;
+            for (int i = length; i < k; i++) nodenum[i] = 0;
         }
-        else {
-            for(int i=0;i<length;i++) nodenum[i]=1;
-            for (int i=length;i<k;i++) nodenum[i]=0;
-        }
-        for (int i = 0; i < k && root!=null; i++) {
+        for (int i = 0; i < k && root != null; i++) {
             result[i] = root;
             l = root;
             int num = nodenum[i];
@@ -66,5 +55,15 @@ public class No725SplitLinkedListinParts {
             cur = next;
         }
         return ret;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }

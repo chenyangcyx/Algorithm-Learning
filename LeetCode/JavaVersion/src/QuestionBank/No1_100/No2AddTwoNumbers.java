@@ -1,24 +1,6 @@
 package QuestionBank.No1_100;
 
 public class No2AddTwoNumbers {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0, null);
         ListNode tt = head, h1 = l1, h2 = l2;
@@ -81,5 +63,23 @@ public class No2AddTwoNumbers {
             tail.next = new ListNode(carry);
         }
         return head;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

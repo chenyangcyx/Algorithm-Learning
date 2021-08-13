@@ -1,6 +1,7 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class No93RestoreIPAddresses {
     ArrayList<String> result = new ArrayList<>();

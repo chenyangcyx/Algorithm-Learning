@@ -20,7 +20,7 @@ public class No115DistinctSubsequences {
         for (int i = start; i < s.length(); i++) {
             if (s.charAt(i) != t.charAt(sb.length())) continue;
             sb.append(s.charAt(i));
-            System.out.println(sb.toString());
+            System.out.println(sb);
             dfs(s, t, i + 1, sb);
             sb.deleteCharAt(sb.length() - 1);
         }

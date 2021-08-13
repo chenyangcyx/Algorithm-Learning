@@ -5,6 +5,19 @@ import java.util.Queue;
 
 public class No695MaxAreaofIsland {
     int m, n;
+    int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
+
+    public static void main(String[] args) {
+        int[][] grid1 = new int[][]{{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+        int[][] grid2 = new int[][]{{1, 1, 0, 0, 0}, {1, 1, 0, 0, 0}, {0, 0, 0, 1, 1}, {0, 0, 0, 1, 1}};
+        int[][] grid3 = new int[][]{{1}, {1}};
+
+        No695MaxAreaofIsland no695MaxAreaofIsland = new No695MaxAreaofIsland();
+
+        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid1));
+        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid2));
+        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid3));
+    }
 
     public int maxAreaOfIsland(int[][] grid) {
         int result = 0;
@@ -21,8 +34,6 @@ public class No695MaxAreaofIsland {
         return result;
     }
 
-    int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
-
     int dfs1(int[][] grid, boolean[][] vis, int x, int y, int size) {
         vis[x][y] = true;
         int maxsize = size + 1;
@@ -34,18 +45,6 @@ public class No695MaxAreaofIsland {
             }
         }
         return maxsize;
-    }
-
-    public static void main(String[] args) {
-        int[][] grid1 = new int[][]{{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
-        int[][] grid2 = new int[][]{{1, 1, 0, 0, 0}, {1, 1, 0, 0, 0}, {0, 0, 0, 1, 1}, {0, 0, 0, 1, 1}};
-        int[][] grid3 = new int[][]{{1}, {1}};
-
-        No695MaxAreaofIsland no695MaxAreaofIsland = new No695MaxAreaofIsland();
-
-        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid1));
-        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid2));
-        System.out.println(no695MaxAreaofIsland.maxAreaOfIsland(grid3));
     }
 
     // LeetCode官方解法1：DFS

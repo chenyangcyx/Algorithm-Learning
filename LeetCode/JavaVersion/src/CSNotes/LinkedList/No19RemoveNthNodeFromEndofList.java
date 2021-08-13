@@ -3,24 +3,6 @@ package CSNotes.LinkedList;
 import java.util.Stack;
 
 public class No19RemoveNthNodeFromEndofList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // 自己写的代码
     // 链表遍历
     public ListNode removeNthFromEnd1_traverse(ListNode head, int n) {
@@ -75,5 +57,23 @@ public class No19RemoveNthNodeFromEndofList {
         }
         slow.next = slow.next.next;
         return head;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        public ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

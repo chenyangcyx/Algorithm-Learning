@@ -1,24 +1,6 @@
 package CSNotes.LinkedList;
 
 public class No24SwapNodesinPairs {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // CS-Note参考代码
     public ListNode swapPairs1(ListNode head) {
         ListNode node = new ListNode(-1);
@@ -45,5 +27,23 @@ public class No24SwapNodesinPairs {
         head.next = swapPairs(newHead.next);
         newHead.next = head;
         return newHead;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

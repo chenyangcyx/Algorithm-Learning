@@ -1,9 +1,13 @@
 package CSNotes.Backtracking;
 
 public class No79WordSearch {
+    // CS-Note 参考代码
+    private final static int[][] direction = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     int row_num = 0, column_num = 0;
     boolean[][] used;
+    private int m;
+    private int n;
 
     public boolean exist(char[][] board, String word) {
         row_num = board.length;
@@ -34,11 +38,6 @@ public class No79WordSearch {
         used[x][y] = false;
         return success;
     }
-
-    // CS-Note 参考代码
-    private final static int[][] direction = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    private int m;
-    private int n;
 
     public boolean exist2(char[][] board, String word) {
         if (word == null || word.length() == 0) {

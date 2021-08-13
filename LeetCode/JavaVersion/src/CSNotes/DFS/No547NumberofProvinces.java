@@ -1,6 +1,7 @@
 package CSNotes.DFS;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class No547NumberofProvinces {
     boolean[] vis;

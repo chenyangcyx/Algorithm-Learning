@@ -5,6 +5,26 @@ import javafx.util.Pair;
 import java.util.*;
 
 public class No417PacificAtlanticWaterFlow {
+    // 自己写的，DFS
+    int m, n;
+    int[][] dire = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public static void main(String[] args) {
+        No417PacificAtlanticWaterFlow no417PacificAtlanticWaterFlow = new No417PacificAtlanticWaterFlow();
+
+        int[][] heights1 = new int[][]{{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
+
+//        List<List<Integer>> result1 = no417PacificAtlanticWaterFlow.pacificAtlantic1(heights1);
+//        for (List<Integer> list : result1) {
+//            System.out.println(list.get(0) + ", " + list.get(1));
+//        }
+
+        List<List<Integer>> result2 = no417PacificAtlanticWaterFlow.pacificAtlantic2(heights1);
+        for (List<Integer> list : result2) {
+            System.out.println(list.get(0) + ", " + list.get(1));
+        }
+    }
+
     // 自己写的，BFS
     public List<List<Integer>> pacificAtlantic1(int[][] heights) {
         if (heights == null || heights.length == 0) {
@@ -78,10 +98,6 @@ public class No417PacificAtlanticWaterFlow {
         return result;
     }
 
-    // 自己写的，DFS
-    int m, n;
-    int[][] dire = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-
     public List<List<Integer>> pacificAtlantic2(int[][] heights) {
         List<List<Integer>> result = new LinkedList<>();
         if (heights == null || heights.length == 0) {
@@ -129,28 +145,12 @@ public class No417PacificAtlanticWaterFlow {
         }
     }
 
-    public static void main(String[] args) {
-        No417PacificAtlanticWaterFlow no417PacificAtlanticWaterFlow = new No417PacificAtlanticWaterFlow();
-
-        int[][] heights1 = new int[][]{{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
-
-//        List<List<Integer>> result1 = no417PacificAtlanticWaterFlow.pacificAtlantic1(heights1);
-//        for (List<Integer> list : result1) {
-//            System.out.println(list.get(0) + ", " + list.get(1));
-//        }
-
-        List<List<Integer>> result2 = no417PacificAtlanticWaterFlow.pacificAtlantic2(heights1);
-        for (List<Integer> list : result2) {
-            System.out.println(list.get(0) + ", " + list.get(1));
-        }
-    }
-
     // LeetCode 参考
     class Solution1 {
         // 用来返回的返回值
-        private List<List<Integer>> ans = new ArrayList<>();
+        private final List<List<Integer>> ans = new ArrayList<>();
         // 方向转换的数组
-        private int[][] dirs = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
+        private final int[][] dirs = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
         // 大西洋和太平洋共享的访问数组
         private boolean[][] visited = null;
 

@@ -1,28 +1,10 @@
 package QuestionBank.No101_200;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No113PathSumII {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     List<List<Integer>> result;
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
@@ -46,6 +28,26 @@ public class No113PathSumII {
         if (root.right != null) {
             checkPath(root.right, target, sum, path);
             path.pollLast();
+        }
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 }

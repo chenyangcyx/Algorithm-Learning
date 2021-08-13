@@ -1,6 +1,18 @@
 package QuestionBank.No101_200;
 
 public class No112PathSum {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        if (root == null) return false;
+        return checkPath(root, 0, targetSum);
+    }
+
+    private boolean checkPath(TreeNode root, int sum, int target) {
+        if (root == null) return false;
+        sum += root.val;
+        if (root.left == null && root.right == null) return sum == target;
+        return checkPath(root.left, sum, target) || checkPath(root.right, sum, target);
+    }
+
     //    Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -19,18 +31,6 @@ public class No112PathSum {
             this.left = left;
             this.right = right;
         }
-    }
-
-    public boolean hasPathSum(TreeNode root, int targetSum) {
-        if (root == null) return false;
-        return checkPath(root, 0, targetSum);
-    }
-
-    private boolean checkPath(TreeNode root, int sum, int target) {
-        if (root == null) return false;
-        sum += root.val;
-        if (root.left == null && root.right == null) return sum == target;
-        return checkPath(root.left, sum, target) || checkPath(root.right, sum, target);
     }
 }
 

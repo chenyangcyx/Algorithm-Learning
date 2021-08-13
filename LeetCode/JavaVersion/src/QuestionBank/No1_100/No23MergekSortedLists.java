@@ -1,9 +1,24 @@
 package QuestionBank.No1_100;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class No23MergekSortedLists {
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> o1 - o2);
+        for (ListNode list : lists) {
+            while (list != null) {
+                queue.add(list.val);
+                list = list.next;
+            }
+        }
+        ListNode newhead = new ListNode(0, null), t = newhead;
+        while (!queue.isEmpty()) {
+            t.next = new ListNode(queue.poll(), null);
+            t = t.next;
+        }
+        return newhead.next;
+    }
+
     //    Definition for singly-linked list.
     public class ListNode {
         int val;
@@ -20,22 +35,6 @@ public class No23MergekSortedLists {
             this.val = val;
             this.next = next;
         }
-    }
-
-    public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> o1 - o2);
-        for (ListNode list : lists) {
-            while (list != null) {
-                queue.add(list.val);
-                list = list.next;
-            }
-        }
-        ListNode newhead = new ListNode(0, null), t = newhead;
-        while (!queue.isEmpty()) {
-            t.next = new ListNode(queue.poll(), null);
-            t = t.next;
-        }
-        return newhead.next;
     }
 }
 

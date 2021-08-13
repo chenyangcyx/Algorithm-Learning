@@ -1,17 +1,17 @@
 package CSNotes.BinarySearch;
 
 public class No278FirstBadVersion {
-    public boolean isBadVersion(int version){
+    public boolean isBadVersion(int version) {
         return true;
     }
 
     // 自己写的代码
     public int firstBadVersion1(int n) {
-        int l=0,r=n-1;
-        while (l<=r){
-            int mid=l+(r-l)/2;
-            if(isBadVersion(mid)) r=mid-1;
-            else l=mid+1;
+        int l = 0, r = n - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (isBadVersion(mid)) r = mid - 1;
+            else l = mid + 1;
         }
         return l;
     }

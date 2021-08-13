@@ -1,4 +1,5 @@
 package QuestionBank.No1001_1100;
+
 import java.util.LinkedList;
 
 public class No1047RemoveAllAdjacentDuplicatesInString {

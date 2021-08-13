@@ -5,6 +5,22 @@ import java.util.*;
 public class No17LetterCombinationsofaPhoneNumber {
     String[] num_chars = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
+    public static void main(String[] args) {
+        String digits1 = "23";
+        String digits2 = "";
+        String digits3 = "2";
+
+        No17LetterCombinationsofaPhoneNumber no17LetterCombinationsofaPhoneNumber = new No17LetterCombinationsofaPhoneNumber();
+
+        List<String> result1 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits1);
+        List<String> result2 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits2);
+        List<String> result3 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits3);
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+    }
+
     public List<String> letterCombinations(String digits) {
         List<String> result = new LinkedList<>();
         if (digits == null || digits.length() == 0) {
@@ -24,22 +40,6 @@ public class No17LetterCombinationsofaPhoneNumber {
             dfs(result, digits, index + 1, sb);
             sb.deleteCharAt(sb.length() - 1);
         }
-    }
-
-    public static void main(String[] args) {
-        String digits1 = "23";
-        String digits2 = "";
-        String digits3 = "2";
-
-        No17LetterCombinationsofaPhoneNumber no17LetterCombinationsofaPhoneNumber = new No17LetterCombinationsofaPhoneNumber();
-
-        List<String> result1 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits1);
-        List<String> result2 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits2);
-        List<String> result3 = no17LetterCombinationsofaPhoneNumber.letterCombinations(digits3);
-
-        System.out.println(result1);
-        System.out.println(result2);
-        System.out.println(result3);
     }
 
     // LeetCode 题解

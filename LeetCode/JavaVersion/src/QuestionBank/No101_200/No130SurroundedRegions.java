@@ -7,6 +7,33 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class No130SurroundedRegions {
+    // 自己写的DFS
+    int m, n;
+    int[][] dire = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public static void main(String[] args) {
+        No130SurroundedRegions no130SurroundedRegions = new No130SurroundedRegions();
+
+        char[][] board1 = new char[][]{{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
+        char[][] board2 = new char[][]{{'X'}};
+
+//        no130SurroundedRegions.solve1(board1);
+//        no130SurroundedRegions.solve1(board2);
+
+        no130SurroundedRegions.solve2(board1);
+        no130SurroundedRegions.solve2(board2);
+
+        for (char[] line : board1) {
+            System.out.println(Arrays.toString(line));
+        }
+        System.out.println();
+
+        for (char[] line : board2) {
+            System.out.println(Arrays.toString(line));
+        }
+        System.out.println();
+    }
+
     // 自己写的BFS
     public void solve1(char[][] board) {
         if (board == null || board.length == 0) {
@@ -45,9 +72,6 @@ public class No130SurroundedRegions {
         }
     }
 
-    // 自己写的DFS
-    int m, n;
-
     public void solve2(char[][] board) {
         if (board == null || board.length == 0) {
             return;
@@ -71,8 +95,6 @@ public class No130SurroundedRegions {
         }
     }
 
-    int[][] dire = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-
     void dfs(char[][] board, int x, int y, boolean[][] flag) {
         flag[x][y] = true;
         for (int[] di : dire) {
@@ -83,29 +105,6 @@ public class No130SurroundedRegions {
             }
             dfs(board, xx, yy, flag);
         }
-    }
-
-    public static void main(String[] args) {
-        No130SurroundedRegions no130SurroundedRegions = new No130SurroundedRegions();
-
-        char[][] board1 = new char[][]{{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
-        char[][] board2 = new char[][]{{'X'}};
-
-//        no130SurroundedRegions.solve1(board1);
-//        no130SurroundedRegions.solve1(board2);
-
-        no130SurroundedRegions.solve2(board1);
-        no130SurroundedRegions.solve2(board2);
-
-        for (char[] line : board1) {
-            System.out.println(Arrays.toString(line));
-        }
-        System.out.println();
-
-        for (char[] line : board2) {
-            System.out.println(Arrays.toString(line));
-        }
-        System.out.println();
     }
 
     // LeetCode题解1：DFS

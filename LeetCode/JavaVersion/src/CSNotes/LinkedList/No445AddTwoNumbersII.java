@@ -1,20 +1,8 @@
 package CSNotes.LinkedList;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Stack;
 
 public class No445AddTwoNumbersII {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     // 自己写的，反转链表
     public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
         ListNode r1 = reverseList(l1), r2 = reverseList(l2);
@@ -71,5 +59,15 @@ public class No445AddTwoNumbersII {
             l = l.next;
         }
         return stack;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }

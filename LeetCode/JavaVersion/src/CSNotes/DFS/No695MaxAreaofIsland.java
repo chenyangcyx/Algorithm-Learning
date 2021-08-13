@@ -4,6 +4,9 @@ public class No695MaxAreaofIsland {
     int[] dir_x = new int[]{-1, 1, 0, 0};
     int[] dir_y = new int[]{0, 0, -1, 1};
     boolean[][] vis;
+    //CS-Note参考代码
+    private int m, n;
+    private final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public int maxAreaOfIsland(int[][] grid) {
         int row_num = grid.length;
@@ -39,10 +42,6 @@ public class No695MaxAreaofIsland {
         if (x < 0 || x >= row_num || y < 0 || y >= column_num || vis[x][y]) return false;
         return grid[x][y] == 1;
     }
-
-    //CS-Note参考代码
-    private int m, n;
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public int maxAreaOfIsland2(int[][] grid) {
         if (grid == null || grid.length == 0) {

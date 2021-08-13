@@ -1,25 +1,8 @@
 package CSNotes.LinkedList;
+
 import java.util.LinkedList;
 
 public class No234PalindromeLinkedList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // 自己写的
     // 反转链表，逐个比较
     public boolean isPalindrome1(ListNode head) {
@@ -110,5 +93,23 @@ public class No234PalindromeLinkedList {
             l2 = l2.next;
         }
         return true;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

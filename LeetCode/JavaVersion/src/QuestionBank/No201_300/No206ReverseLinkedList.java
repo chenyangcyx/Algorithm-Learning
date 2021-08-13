@@ -1,24 +1,6 @@
 package QuestionBank.No201_300;
 
 public class No206ReverseLinkedList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode reverseList(ListNode head) {
         ListNode pre = null, cur = head;
         while (cur != null) {
@@ -37,5 +19,23 @@ public class No206ReverseLinkedList {
         head.next.next = head;
         head.next = null;
         return newhead;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

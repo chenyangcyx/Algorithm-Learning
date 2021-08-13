@@ -3,24 +3,6 @@ package CSNotes.LinkedList;
 import java.util.Stack;
 
 public class No206ReverseLinkedList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // 自己写的
     // 使用栈的形式
     public ListNode reverseList1_Stack(ListNode head) {
@@ -90,5 +72,23 @@ public class No206ReverseLinkedList {
         head.next.next = head;
         head.next = null;
         return newHead;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

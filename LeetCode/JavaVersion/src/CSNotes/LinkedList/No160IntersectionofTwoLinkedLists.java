@@ -1,21 +1,9 @@
 package CSNotes.LinkedList;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class No160IntersectionofTwoLinkedLists {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     // 自己写的
     // 使用hashset容器
     public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
@@ -28,7 +16,7 @@ public class No160IntersectionofTwoLinkedLists {
         ListNode t2 = headB;
         while (t2 != null) {
             if (allnode.contains(t2)) return t2;
-            t2=t2.next;
+            t2 = t2.next;
         }
         return null;
     }
@@ -41,5 +29,16 @@ public class No160IntersectionofTwoLinkedLists {
             l2 = (l2 == null) ? headA : l2.next;
         }
         return l1;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
     }
 }

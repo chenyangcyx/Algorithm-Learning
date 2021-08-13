@@ -1,6 +1,9 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No46Permutations {
     public List<List<Integer>> permute(int[] nums) {

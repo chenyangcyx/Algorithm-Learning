@@ -4,7 +4,6 @@ import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 public class No37SudokuSolver {
     ArrayList<Pair<Integer, Integer>> blank_list = new ArrayList<>();

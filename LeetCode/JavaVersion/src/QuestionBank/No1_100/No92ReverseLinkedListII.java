@@ -1,24 +1,6 @@
 package QuestionBank.No1_100;
 
 public class No92ReverseLinkedListII {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode reverseBetween(ListNode head, int left, int right) {
         // 创建一个虚拟头结点
         ListNode myhead = new ListNode(-1);
@@ -119,5 +101,23 @@ public class No92ReverseLinkedListII {
             pre.next = next;
         }
         return dummyNode.next;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

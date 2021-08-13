@@ -1,6 +1,9 @@
 package CSNotes.Backtracking;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class No47PermutationsII {
     boolean[] used;
@@ -51,7 +54,7 @@ public class No47PermutationsII {
             if (i != 0 && nums[i] == nums[i - 1] && !visited[i - 1]) {
                 continue;  // 防止重复
             }
-            if (visited[i]){
+            if (visited[i]) {
                 continue;
             }
             visited[i] = true;

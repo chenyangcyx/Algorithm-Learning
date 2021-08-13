@@ -1,24 +1,6 @@
 package QuestionBank.No1_100;
 
 public class No61RotateList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null) return head;
         ListNode last = head;
@@ -62,5 +44,23 @@ public class No61RotateList {
         ListNode ret = iter.next;
         iter.next = null;
         return ret;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

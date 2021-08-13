@@ -4,6 +4,34 @@ import java.util.*;
 
 public class No127WordLadder {
     int len = 0;
+    // LeetCode 参考代码1
+    Map<String, Integer> wordId = new HashMap<String, Integer>();
+    List<List<Integer>> edge = new ArrayList<List<Integer>>();
+    int nodeNum = 0;
+
+    public static void main(String[] args) {
+        No127WordLadder no127WordLadder = new No127WordLadder();
+
+        String beginWord1 = "hit";
+        String endWord1 = "cog";
+        List<String> wordList1 = Arrays.asList("hot", "dot", "dog", "lot", "log", "cog");
+        System.out.println(no127WordLadder.ladderLength(beginWord1, endWord1, wordList1));
+
+        String beginWord2 = "hit";
+        String endWord2 = "cog";
+        List<String> wordList2 = Arrays.asList("hot", "dot", "dog", "lot", "log");
+        System.out.println(no127WordLadder.ladderLength(beginWord2, endWord2, wordList2));
+
+        String beginWord3 = "hot";
+        String endWord3 = "dog";
+        List<String> wordList3 = Arrays.asList("hot", "cog", "dog", "tot", "hog", "hop", "pot", "dot");
+        System.out.println(no127WordLadder.ladderLength(beginWord3, endWord3, wordList3));
+
+        String beginWord4 = "hit";
+        String endWord4 = "cog";
+        List<String> wordList4 = Arrays.asList("hot", "cog", "dot", "dog", "hit", "lot", "log");
+        System.out.println(no127WordLadder.ladderLength(beginWord4, endWord4, wordList4));
+    }
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         // 判断数据是否正确
@@ -89,35 +117,6 @@ public class No127WordLadder {
         }
         return count == 1;
     }
-
-    public static void main(String[] args) {
-        No127WordLadder no127WordLadder = new No127WordLadder();
-
-        String beginWord1 = "hit";
-        String endWord1 = "cog";
-        List<String> wordList1 = Arrays.asList("hot", "dot", "dog", "lot", "log", "cog");
-        System.out.println(no127WordLadder.ladderLength(beginWord1, endWord1, wordList1));
-
-        String beginWord2 = "hit";
-        String endWord2 = "cog";
-        List<String> wordList2 = Arrays.asList("hot", "dot", "dog", "lot", "log");
-        System.out.println(no127WordLadder.ladderLength(beginWord2, endWord2, wordList2));
-
-        String beginWord3 = "hot";
-        String endWord3 = "dog";
-        List<String> wordList3 = Arrays.asList("hot", "cog", "dog", "tot", "hog", "hop", "pot", "dot");
-        System.out.println(no127WordLadder.ladderLength(beginWord3, endWord3, wordList3));
-
-        String beginWord4 = "hit";
-        String endWord4 = "cog";
-        List<String> wordList4 = Arrays.asList("hot", "cog", "dot", "dog", "hit", "lot", "log");
-        System.out.println(no127WordLadder.ladderLength(beginWord4, endWord4, wordList4));
-    }
-
-    // LeetCode 参考代码1
-    Map<String, Integer> wordId = new HashMap<String, Integer>();
-    List<List<Integer>> edge = new ArrayList<List<Integer>>();
-    int nodeNum = 0;
 
     public int ladderLength2(String beginWord, String endWord, List<String> wordList) {
         for (String word : wordList) {

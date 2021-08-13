@@ -1,6 +1,7 @@
 package QuestionBank.No201_300;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class No224BasicCalculator_2 {
     class Solution {
@@ -36,7 +37,7 @@ public class No224BasicCalculator_2 {
                         int u = 0;
                         int j = i;
                         // 将从 i 位置开始后面的连续数字整体取出，加入 nums
-                        while (j < n && isNum(cs[j])) u = u * 10 + (int) (cs[j++] - '0');
+                        while (j < n && isNum(cs[j])) u = u * 10 + (cs[j++] - '0');
                         nums.addLast(u);
                         i = j - 1;
                     } else {

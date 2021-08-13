@@ -1,6 +1,14 @@
 package QuestionBank.No1101_1200;
 
 public class No1137NthTribonacciNumber {
+    public static void main(String[] args) {
+        No1137NthTribonacciNumber no1137NthTribonacciNumber = new No1137NthTribonacciNumber();
+
+        System.out.println(no1137NthTribonacciNumber.tribonacci(4));
+        System.out.println(no1137NthTribonacciNumber.tribonacci(10));
+        System.out.println(no1137NthTribonacciNumber.tribonacci(25));
+    }
+
     public int tribonacci(int n) {
         int[] nums = new int[n + 1];
         if (n == 0) {
@@ -15,13 +23,5 @@ public class No1137NthTribonacciNumber {
             }
         }
         return nums[n];
-    }
-
-    public static void main(String[] args) {
-        No1137NthTribonacciNumber no1137NthTribonacciNumber = new No1137NthTribonacciNumber();
-
-        System.out.println(no1137NthTribonacciNumber.tribonacci(4));
-        System.out.println(no1137NthTribonacciNumber.tribonacci(10));
-        System.out.println(no1137NthTribonacciNumber.tribonacci(25));
     }
 }

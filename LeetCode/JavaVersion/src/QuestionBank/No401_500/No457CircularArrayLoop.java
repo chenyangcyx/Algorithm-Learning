@@ -2,6 +2,31 @@ package QuestionBank.No401_500;
 
 
 public class No457CircularArrayLoop {
+    public static void main(String[] args) {
+        int[] num1 = new int[]{2, -1, 1, 2, 2};
+        int[] num2 = new int[]{-1, 2};
+        int[] num3 = new int[]{-2, 1, -1, -2, -2};
+        int[] num4 = new int[]{-1, -1, -3};
+        int[] num5 = new int[]{-1};
+        int[] num6 = new int[]{-2, -17, -1, -2, -2};
+
+        No457CircularArrayLoop no457_circularArrayLoop = new No457CircularArrayLoop();
+
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num1));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num2));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num3));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num4));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num5));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num6));
+
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num1));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num2));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num3));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num4));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num5));
+        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num6));
+    }
+
     public boolean circularArrayLoop1(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int start = i;
@@ -59,30 +84,5 @@ public class No457CircularArrayLoop {
 
     private int nextPos(int[] nums, int cur) {
         return ((cur + nums[cur]) % nums.length + nums.length) % nums.length;
-    }
-
-    public static void main(String[] args) {
-        int[] num1 = new int[]{2, -1, 1, 2, 2};
-        int[] num2 = new int[]{-1, 2};
-        int[] num3 = new int[]{-2, 1, -1, -2, -2};
-        int[] num4 = new int[]{-1, -1, -3};
-        int[] num5 = new int[]{-1};
-        int[] num6 = new int[]{-2, -17, -1, -2, -2};
-
-        No457CircularArrayLoop no457_circularArrayLoop = new No457CircularArrayLoop();
-
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num1));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num2));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num3));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num4));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num5));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop1(num6));
-
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num1));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num2));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num3));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num4));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num5));
-        System.out.println(no457_circularArrayLoop.circularArrayLoop2(num6));
     }
 }

@@ -1,7 +1,5 @@
 package QuestionBank.No1_100;
 
-import java.util.Arrays;
-
 public class No14LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         int N = strs.length;

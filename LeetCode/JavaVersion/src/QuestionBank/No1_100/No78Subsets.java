@@ -1,8 +1,26 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No78Subsets {
+    public static void main(String[] args) {
+        No78Subsets no78Subsets = new No78Subsets();
+
+        int[] nums1 = new int[]{1, 2, 3};
+        int[] nums2 = new int[]{0};
+
+        List<List<Integer>> result1 = no78Subsets.subsets(nums1);
+        System.out.println(result1);
+
+        List<List<Integer>> result2 = no78Subsets.subsets(nums2);
+        System.out.println(result2);
+
+        System.out.println(no78Subsets.subsets2(nums1));
+        System.out.println(no78Subsets.subsets2(nums2));
+    }
+
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new LinkedList<>();
         if (nums == null || nums.length == 0) {
@@ -48,22 +66,6 @@ public class No78Subsets {
             result.add(new LinkedList<>(temp));
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        No78Subsets no78Subsets = new No78Subsets();
-
-        int[] nums1 = new int[]{1, 2, 3};
-        int[] nums2 = new int[]{0};
-
-        List<List<Integer>> result1 = no78Subsets.subsets(nums1);
-        System.out.println(result1);
-
-        List<List<Integer>> result2 = no78Subsets.subsets(nums2);
-        System.out.println(result2);
-
-        System.out.println(no78Subsets.subsets2(nums1));
-        System.out.println(no78Subsets.subsets2(nums2));
     }
 
     // LeetCode 题解1：迭代法

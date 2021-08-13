@@ -1,24 +1,6 @@
 package CSNotes.LinkedList;
 
 public class No83RemoveDuplicatesfromSortedList {
-    //    Definition for singly-linked list.
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     // 自己写的代码
     public ListNode deleteDuplicates1(ListNode head) {
         ListNode l = head;
@@ -36,5 +18,23 @@ public class No83RemoveDuplicatesfromSortedList {
         if (head == null || head.next == null) return head;
         head.next = deleteDuplicates(head.next);
         return head.val == head.next.val ? head.next : head;
+    }
+
+    //    Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

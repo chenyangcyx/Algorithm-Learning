@@ -1,17 +1,8 @@
 package QuestionBank.No101_200;
 
 public class No122BestTimetoBuyandSellStockII {
-    public int maxProfit(int[] prices) {
-        int length = prices.length;
-        if (length == 0 || (length == 2 && prices[0] > prices[1])) return 0;
-        int sum = 0;
-        int min = prices[0];
-        for (int i = 1; i < length; i++) {
-            if (prices[i] > min) sum += prices[i] - min;
-            min = prices[i];
-        }
-        return sum;
-    }
+    // 暴力搜索
+    private int res;
 
     // LeetCode 题解1
     /*
@@ -40,8 +31,17 @@ public class No122BestTimetoBuyandSellStockII {
     }
      */
 
-    // 暴力搜索
-    private int res;
+    public int maxProfit(int[] prices) {
+        int length = prices.length;
+        if (length == 0 || (length == 2 && prices[0] > prices[1])) return 0;
+        int sum = 0;
+        int min = prices[0];
+        for (int i = 1; i < length; i++) {
+            if (prices[i] > min) sum += prices[i] - min;
+            min = prices[i];
+        }
+        return sum;
+    }
 
     public int maxProfit_1(int[] prices) {
         int len = prices.length;

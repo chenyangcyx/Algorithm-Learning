@@ -1,6 +1,7 @@
 package QuestionBank.No1401_1500;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class No1411NumberofWaystoPaintN_3Grid {
     // LeetCode 参考代码1

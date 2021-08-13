@@ -1,28 +1,11 @@
 package QuestionBank.No201_300;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class No257BinaryTreePaths {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new LinkedList<>();
         if (root == null) {
@@ -57,10 +40,7 @@ public class No257BinaryTreePaths {
         }
         path.pollLast();
     }
-}
 
-// LeetCode 题解1：DFS
-class Solution1 {
     //    Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -80,7 +60,10 @@ class Solution1 {
             this.right = right;
         }
     }
+}
 
+// LeetCode 题解1：DFS
+class Solution1 {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> paths = new ArrayList<String>();
         constructPaths(root, "", paths);
@@ -90,7 +73,7 @@ class Solution1 {
     public void constructPaths(TreeNode root, String path, List<String> paths) {
         if (root != null) {
             StringBuffer pathSB = new StringBuffer(path);
-            pathSB.append(Integer.toString(root.val));
+            pathSB.append(root.val);
             if (root.left == null && root.right == null) {  // 当前节点是叶子节点
                 paths.add(pathSB.toString());  // 把路径加入到答案中
             } else {
@@ -100,10 +83,7 @@ class Solution1 {
             }
         }
     }
-}
 
-// LeetCode 题解2：BFS
-class Solution2 {
     //    Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -123,7 +103,10 @@ class Solution2 {
             this.right = right;
         }
     }
+}
 
+// LeetCode 题解2：BFS
+class Solution2 {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> paths = new ArrayList<String>();
         if (root == null) {
@@ -154,5 +137,25 @@ class Solution2 {
             }
         }
         return paths;
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

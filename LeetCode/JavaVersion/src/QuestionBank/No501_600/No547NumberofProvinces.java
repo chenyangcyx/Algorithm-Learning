@@ -5,6 +5,9 @@ import java.util.Queue;
 
 public class No547NumberofProvinces {
     int N = 0;
+    // 自己写的并查集
+    int[] parent;
+    int bingchaji_N = 0;
 
     public int findCircleNum(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0) {
@@ -56,10 +59,6 @@ public class No547NumberofProvinces {
         }
         return result;
     }
-
-    // 自己写的并查集
-    int[] parent;
-    int bingchaji_N = 0;
 
     int bingchaji(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0) {

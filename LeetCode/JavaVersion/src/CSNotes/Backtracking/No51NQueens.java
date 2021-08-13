@@ -1,10 +1,20 @@
 package CSNotes.Backtracking;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No51NQueens {
     int[] pos;
     List<List<String>> result;
+    // CS-Note 参考代码
+    private List<List<String>> solutions;
+    private char[][] nQueens;
+    private boolean[] colUsed;
+    private boolean[] diagonals45Used;
+    private boolean[] diagonals135Used;
+    private int n;
 
     public List<List<String>> solveNQueens(int n) {
         pos = new int[n];
@@ -45,14 +55,6 @@ public class No51NQueens {
         }
         return true;
     }
-
-    // CS-Note 参考代码
-    private List<List<String>> solutions;
-    private char[][] nQueens;
-    private boolean[] colUsed;
-    private boolean[] diagonals45Used;
-    private boolean[] diagonals135Used;
-    private int n;
 
     public List<List<String>> solveNQueens2(int n) {
         solutions = new ArrayList<>();

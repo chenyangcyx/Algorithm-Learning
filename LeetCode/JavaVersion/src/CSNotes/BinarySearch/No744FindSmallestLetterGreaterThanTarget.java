@@ -9,7 +9,7 @@ public class No744FindSmallestLetterGreaterThanTarget {
             if (letters[mid] > target) r = mid - 1;
             else l = mid + 1;
         }
-        return l>=letters.length?letters[0]:letters[l];
+        return l >= letters.length ? letters[0] : letters[l];
     }
 
     // CS-Note参考代码

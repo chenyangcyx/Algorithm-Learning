@@ -1,19 +1,9 @@
 package QuestionBank.No101_200;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class No141LinkedListCycle {
-    //    Definition for singly-linked list.
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public boolean hasCycle1(ListNode head) {
         if (head == null || head.next == null) return false;
         ListNode t1 = head, t2 = head.next;
@@ -62,5 +52,16 @@ public class No141LinkedListCycle {
             fast = fast.next.next;
         }
         return true;
+    }
+
+    //    Definition for singly-linked list.
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
     }
 }

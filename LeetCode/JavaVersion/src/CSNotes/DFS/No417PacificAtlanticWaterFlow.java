@@ -1,6 +1,8 @@
 package CSNotes.DFS;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class No417PacificAtlanticWaterFlow {
     int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -8,6 +10,10 @@ public class No417PacificAtlanticWaterFlow {
     int column_num = 0;
     boolean[][] vis;
     boolean[][] to_pacific, to_atlantic;
+    // CS-Note 参考代码
+    private int m, n;
+    private int[][] matrix;
+    private final int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public List<List<Integer>> pacificAtlantic(int[][] matrix) {
         List<List<Integer>> result = new ArrayList<>();
@@ -44,12 +50,6 @@ public class No417PacificAtlanticWaterFlow {
         }
         vis[x][y] = false;
     }
-
-
-    // CS-Note 参考代码
-    private int m, n;
-    private int[][] matrix;
-    private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     public List<List<Integer>> pacificAtlantic2(int[][] matrix) {
         List<List<Integer>> ret = new ArrayList<>();

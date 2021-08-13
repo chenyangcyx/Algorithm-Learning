@@ -9,40 +9,6 @@ public class No1091ShortestPathinBinaryMatrix {
     int[] dir_x = new int[]{-1, 0, 1, -1, 1, -1, 0, 1};
     int[] dir_y = new int[]{-1, -1, -1, 0, 0, 1, 1, 1};
 
-    class Point {
-        private int x, y, path_length;
-
-        public Point(int x, int y, int path_length) {
-            this.x = x;
-            this.y = y;
-            this.path_length = path_length;
-        }
-
-        public int getX() {
-            return x;
-        }
-
-        public void setX(int x) {
-            this.x = x;
-        }
-
-        public int getY() {
-            return y;
-        }
-
-        public void setY(int y) {
-            this.y = y;
-        }
-
-        public int getPath_length() {
-            return path_length;
-        }
-
-        public void setPath_length(int path_length) {
-            this.path_length = path_length;
-        }
-    }
-
     public int shortestPathBinaryMatrix(int[][] grid) {
         if (grid[0][0] == 1) return -1;
         boolean[][] inque = new boolean[grid.length][grid[0].length];
@@ -106,5 +72,39 @@ public class No1091ShortestPathinBinaryMatrix {
             }
         }
         return -1;
+    }
+
+    class Point {
+        private int x, y, path_length;
+
+        public Point(int x, int y, int path_length) {
+            this.x = x;
+            this.y = y;
+            this.path_length = path_length;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        public int getPath_length() {
+            return path_length;
+        }
+
+        public void setPath_length(int path_length) {
+            this.path_length = path_length;
+        }
     }
 }

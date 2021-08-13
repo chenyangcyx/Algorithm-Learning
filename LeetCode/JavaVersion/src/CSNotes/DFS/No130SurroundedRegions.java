@@ -1,6 +1,7 @@
 package CSNotes.DFS;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class No130SurroundedRegions {
     // 自己写的
@@ -36,6 +37,11 @@ public class No130SurroundedRegions {
 //    }
 
     int[][] dire = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    // LeetCode参考代码，DFS
+    int n, m;
+    // LeetCode参考代码，BFS
+    int[] dx = {1, -1, 0, 0};
+    int[] dy = {0, 0, 1, -1};
 
     public void solve(char[][] board) {
         int row_num = board.length;
@@ -63,9 +69,6 @@ public class No130SurroundedRegions {
             dfs(board, row_num, column_num, x + di[0], y + di[1]);
         }
     }
-
-    // LeetCode参考代码，DFS
-    int n, m;
 
     public void solve2(char[][] board) {
         n = board.length;
@@ -102,10 +105,6 @@ public class No130SurroundedRegions {
         dfs(board, x, y + 1);
         dfs(board, x, y - 1);
     }
-
-    // LeetCode参考代码，BFS
-    int[] dx = {1, -1, 0, 0};
-    int[] dy = {0, 0, 1, -1};
 
     public void solve3(char[][] board) {
         int n = board.length;

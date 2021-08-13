@@ -1,8 +1,13 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No15_3Sum {
+    boolean[] used;
+
     public List<List<Integer>> threeSum1(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums.length < 3) return result;
@@ -26,8 +31,6 @@ public class No15_3Sum {
         }
         return result;
     }
-
-    boolean[] used;
 
     public List<List<Integer>> threeSum2(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

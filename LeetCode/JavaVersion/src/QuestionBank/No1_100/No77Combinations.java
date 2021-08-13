@@ -1,6 +1,8 @@
 package QuestionBank.No1_100;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No77Combinations {
     public List<List<Integer>> combine(int n, int k) {
@@ -22,7 +24,7 @@ public class No77Combinations {
 
         // LeetCode 题解
         class Solution1 {
-            List<Integer> temp = new ArrayList<Integer>();
+            final List<Integer> temp = new ArrayList<Integer>();
             List<List<Integer>> ans = new ArrayList<List<Integer>>();
 
             public List<List<Integer>> combine(int n, int k) {

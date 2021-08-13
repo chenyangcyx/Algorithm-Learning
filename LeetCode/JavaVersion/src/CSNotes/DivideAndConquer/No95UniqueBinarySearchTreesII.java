@@ -1,27 +1,9 @@
 package CSNotes.DivideAndConquer;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class No95UniqueBinarySearchTreesII {
-    //    Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public List<TreeNode> generateTrees(int n) {
         if (n == 0) return new ArrayList<>();
         return getSubTree(1, n);
@@ -46,5 +28,25 @@ public class No95UniqueBinarySearchTreesII {
             }
         }
         return tree;
+    }
+
+    //    Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

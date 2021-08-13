@@ -1,6 +1,7 @@
 package QuestionBank.No701_800;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class No781RabbitsinForest {
     public int numRabbits(int[] answers) {

@@ -1,6 +1,9 @@
 package QuestionBank.No1_100;
 
 public class No62UniquePaths {
+    int result = 0;
+    int[][] dire = new int[][]{{0, 1}, {1, 0}};
+
     public int uniquePaths1(int m, int n) {
         int[][] gra = new int[m][n];
         gra[0][0] = 1;
@@ -25,9 +28,6 @@ public class No62UniquePaths {
         }
         return (int) ans;
     }
-
-    int result = 0;
-    int[][] dire = new int[][]{{0, 1}, {1, 0}};
 
     public int uniquePaths3(int m, int n) {
         dfs(m, n, 0, 0);

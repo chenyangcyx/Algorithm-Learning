@@ -1,8 +1,21 @@
 package QuestionBank.No101_200;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No131PalindromePartitioning {
+    public static void main(String[] args) {
+        No131PalindromePartitioning no131PalindromePartitioning = new No131PalindromePartitioning();
+
+        String s1 = "aab";
+        String s2 = "a";
+
+        System.out.println(no131PalindromePartitioning.partition(s1));
+        System.out.println(no131PalindromePartitioning.partition(s2));
+    }
+
     public List<List<String>> partition(String s) {
         List<List<String>> result = new LinkedList<>();
         if (s == null || s.length() == 0) {
@@ -32,16 +45,6 @@ public class No131PalindromePartitioning {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        No131PalindromePartitioning no131PalindromePartitioning = new No131PalindromePartitioning();
-
-        String s1 = "aab";
-        String s2 = "a";
-
-        System.out.println(no131PalindromePartitioning.partition(s1));
-        System.out.println(no131PalindromePartitioning.partition(s2));
     }
 
     // LeetCode 题解1：回溯 + 动态规划预处理

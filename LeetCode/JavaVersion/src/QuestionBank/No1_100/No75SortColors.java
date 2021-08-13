@@ -3,6 +3,35 @@ package QuestionBank.No1_100;
 import java.util.Arrays;
 
 public class No75SortColors {
+    public static void main(String[] args) {
+        int[] nums1 = new int[]{2, 0, 2, 1, 1, 0};
+        int[] nums2 = new int[]{2, 0, 1};
+        int[] nums3 = new int[]{0};
+        int[] nums4 = new int[]{1};
+
+        No75SortColors no75SortColors = new No75SortColors();
+
+//        no75SortColors.sortColors1(nums1);
+//        no75SortColors.sortColors1(nums2);
+//        no75SortColors.sortColors1(nums3);
+//        no75SortColors.sortColors1(nums4);
+
+//        no75SortColors.sortColors2(nums1);
+//        no75SortColors.sortColors2(nums2);
+//        no75SortColors.sortColors2(nums3);
+//        no75SortColors.sortColors2(nums4);
+
+        no75SortColors.sortColors3(nums1);
+        no75SortColors.sortColors3(nums2);
+        no75SortColors.sortColors3(nums3);
+        no75SortColors.sortColors3(nums4);
+
+        System.out.println(Arrays.toString(nums1));
+        System.out.println(Arrays.toString(nums2));
+        System.out.println(Arrays.toString(nums3));
+        System.out.println(Arrays.toString(nums4));
+    }
+
     public void sortColors1(int[] nums) {
         int po = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -49,34 +78,5 @@ public class No75SortColors {
         int t = nums[a];
         nums[a] = nums[b];
         nums[b] = t;
-    }
-
-    public static void main(String[] args) {
-        int[] nums1 = new int[]{2, 0, 2, 1, 1, 0};
-        int[] nums2 = new int[]{2, 0, 1};
-        int[] nums3 = new int[]{0};
-        int[] nums4 = new int[]{1};
-
-        No75SortColors no75SortColors = new No75SortColors();
-
-//        no75SortColors.sortColors1(nums1);
-//        no75SortColors.sortColors1(nums2);
-//        no75SortColors.sortColors1(nums3);
-//        no75SortColors.sortColors1(nums4);
-
-//        no75SortColors.sortColors2(nums1);
-//        no75SortColors.sortColors2(nums2);
-//        no75SortColors.sortColors2(nums3);
-//        no75SortColors.sortColors2(nums4);
-
-        no75SortColors.sortColors3(nums1);
-        no75SortColors.sortColors3(nums2);
-        no75SortColors.sortColors3(nums3);
-        no75SortColors.sortColors3(nums4);
-
-        System.out.println(Arrays.toString(nums1));
-        System.out.println(Arrays.toString(nums2));
-        System.out.println(Arrays.toString(nums3));
-        System.out.println(Arrays.toString(nums4));
     }
 }

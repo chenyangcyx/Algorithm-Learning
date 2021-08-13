@@ -1,8 +1,34 @@
 package QuestionBank.No101_200;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class No199BinaryTreeRightSideView {
+    public List<Integer> rightSideView(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        if (root == null) return result;
+        LinkedList<MyNode> queue = new LinkedList<>();
+        queue.add(new MyNode(root, 0));
+        HashMap<Integer, LinkedList<Integer>> level_data = new HashMap<>();
+        int max_level = -1;
+        while (!queue.isEmpty()) {
+            MyNode node = queue.pollFirst();
+            if (node.node.left != null) queue.add(new MyNode(node.node.left, node.level + 1));
+            if (node.node.right != null) queue.add(new MyNode(node.node.right, node.level + 1));
+            if (!level_data.containsKey(node.level)) {
+                level_data.put(node.level, new LinkedList<>());
+            }
+            level_data.get(node.level).addLast(node.node.val);
+            max_level = Integer.max(max_level, node.level);
+        }
+        for (int i = 0; i <= max_level; i++) {
+            result.add(level_data.get(i).pollLast());
+        }
+        return result;
+    }
+
     //    Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -31,29 +57,6 @@ public class No199BinaryTreeRightSideView {
             this.node = n;
             this.level = l;
         }
-    }
-
-    public List<Integer> rightSideView(TreeNode root) {
-        ArrayList<Integer> result = new ArrayList<>();
-        if (root == null) return result;
-        LinkedList<MyNode> queue = new LinkedList<>();
-        queue.add(new MyNode(root, 0));
-        HashMap<Integer, LinkedList<Integer>> level_data = new HashMap<>();
-        int max_level = -1;
-        while (!queue.isEmpty()) {
-            MyNode node = queue.pollFirst();
-            if (node.node.left != null) queue.add(new MyNode(node.node.left, node.level + 1));
-            if (node.node.right != null) queue.add(new MyNode(node.node.right, node.level + 1));
-            if (!level_data.containsKey(node.level)) {
-                level_data.put(node.level, new LinkedList<>());
-            }
-            level_data.get(node.level).addLast(node.node.val);
-            max_level = Integer.max(max_level, node.level);
-        }
-        for (int i = 0; i <= max_level; i++) {
-            result.add(level_data.get(i).pollLast());
-        }
-        return result;
     }
 }
 

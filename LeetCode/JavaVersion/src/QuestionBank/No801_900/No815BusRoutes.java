@@ -1,20 +1,8 @@
 package QuestionBank.No801_900;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class No815BusRoutes {
-    class Node {
-        int bus_index;
-        int station_index;
-        int level;
-
-        public Node(int b, int s, int l) {
-            this.bus_index = b;
-            this.station_index = s;
-            this.level = l;
-        }
-    }
-
     boolean[][] vis;
     LinkedList<Node> queue;
 
@@ -69,6 +57,18 @@ public class No815BusRoutes {
             if (bus_no[i] == station_no) return i;
         }
         return -1;
+    }
+
+    class Node {
+        int bus_index;
+        int station_index;
+        int level;
+
+        public Node(int b, int s, int l) {
+            this.bus_index = b;
+            this.station_index = s;
+            this.level = l;
+        }
     }
 }
 
