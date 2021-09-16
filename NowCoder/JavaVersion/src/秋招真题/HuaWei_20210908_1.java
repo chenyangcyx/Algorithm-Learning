@@ -3,7 +3,7 @@ package 秋招真题;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class No20210908_1 {
+public class HuaWei_20210908_1 {
     static class Node {
         int no;
         int val;
