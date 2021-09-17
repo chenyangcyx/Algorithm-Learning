@@ -1,4 +1,4 @@
-package HuaWei;
+package QuestionBank.华为;
 
 import java.util.HashMap;
 import java.util.Scanner;
