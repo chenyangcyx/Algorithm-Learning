@@ -1,9 +1,9 @@
-package 秋招真题;
+package 秋招真题.华为;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class HuaWei_20210908_1 {
+public class hw20210908_1 {
     static class Node {
         int no;
         int val;
